@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - FBDownloader</title>
+    <meta name="description" content="Read our terms of service to understand the rules and regulations for using FBDownloader.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
+                        <svg class="text-white w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class="text-blue-600">viddl</span></span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                    <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                    <a href="index.html#downloader" class="hover:text-blue-600 transition-colors">Downloader</a>
+                    <a href="index.html#guide" class="hover:text-blue-600 transition-colors">How to Use</a>
+                    <a href="index.html#faq" class="hover:text-blue-600 transition-colors">FAQ</a>
+                    <a href="about.html" class="hover:text-blue-600 transition-colors">About</a>
+                    <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-white z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
+            <div class="flex flex-col h-full">
+                <div class="h-16 flex items-center justify-between px-6 border-b border-gray-100">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <div class="bg-blue-600 p-1 rounded-lg">
+                            <svg class="text-white w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </div>
+                        <span class="text-base font-bold text-gray-900 tracking-tight">FB<span class="text-blue-600">viddl</span></span>
+                    </a>
+                    <button id="closeMenuBtn" class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-grow overflow-y-auto">
+                    <nav class="flex flex-col">
+                        <a href="index.html" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            Home
+                        </a>
+                        <a href="index.html#downloader" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            Downloader
+                        </a>
+                        <a href="index.html#guide" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            How to Use
+                        </a>
+                        <a href="index.html#faq" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            FAQ
+                        </a>
+                        <a href="about.html" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            About
+                        </a>
+                        <a href="contact.html" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Terms Hero Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">Terms of Service</h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Please read these terms carefully before using our service.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-4 space-y-12">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    By accessing and using FBDownloader, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Use License</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    FBDownloader provides a tool for downloading Facebook videos for personal, non-commercial use only. You may not use this service to infringe upon the intellectual property rights of others. You agree not to:
+                </p>
+                <ul class="list-disc ml-6 mt-4 text-gray-600 space-y-2">
+                    <li>Use the service for any illegal purpose.</li>
+                    <li>Attempt to decompile or reverse engineer any software contained on the website.</li>
+                    <li>Remove any copyright or other proprietary notations from the materials.</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Disclaimer</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    The materials on FBDownloader's website are provided on an 'as is' basis. FBDownloader makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Limitations</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    In no event shall FBDownloader or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on FBDownloader's website, even if FBDownloader or a FBDownloader authorized representative has been notified orally or in writing of the possibility of such damage.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Accuracy of Materials</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    The materials appearing on FBDownloader's website could include technical, typographical, or photographic errors. FBDownloader does not warrant that any of the materials on its website are accurate, complete, or current. FBDownloader may make changes to the materials contained on its website at any time without notice.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Links</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    FBDownloader has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by FBDownloader of the site. Use of any such linked website is at the user's own risk.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Modifications</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    FBDownloader may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+                </p>
+            </div>
+
+            <div class="pt-8 border-t border-gray-100">
+                <p class="text-gray-500 text-sm">
+                    Last Updated: April 25, 2026
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="col-span-1">
+                    <a href="index.html" class="flex items-center space-x-2 mb-6 group">
+                        <div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
+                            <svg class="text-white w-5 h-5" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class="text-blue-600">Downloader</span></span>
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        The fastest and most reliable way to download Facebook videos and reels in HD quality. Free, secure, and easy to use.
+                    </p>
+                    <div class="pt-6 border-t border-gray-100">
+                        <h4 class="text-xs font-bold text-gray-900 mb-4">DISCLAIMER</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed italic">
+                            FBDownloader is not affiliated with Meta or Facebook. We do not host any videos on our servers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-6">PRODUCT</h4>
+                    <ul class="space-y-6">
+                        <li><a href="index.html#downloader" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>Downloader</a></li>
+                        <li><a href="index.html#guide" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>How to Use</a></li>
+                        <li><a href="index.html#faq" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>FAQ</a></li>
+                        <li><a href="about.html" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-6">LEGAL & CONTACT</h4>
+                    <ul class="space-y-6">
+                        <li><a href="privacy.html" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-blue-600 font-bold text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">© 2026 FBDownloader. All rights reserved.</p>
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-400 text-xs">v1.0.0</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
