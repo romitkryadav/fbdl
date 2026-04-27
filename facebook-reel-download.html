@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Reels Downloader</title>
+    <meta name="description" content="Fast and free Facebook video downloader. Download Facebook videos and reels in high quality (HD) directly to your device. No login required.">
+    <meta name="keywords" content="facebook video downloader, fb video download, download facebook reels, fb downloader, facebook download, free fb video download, hd facebook videos">
+    <meta name="author" content="FBviddl">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fbviddl.com/facebook-reel-download">
+    <meta property="og:title" content="Facebook Reels Downloader">
+    <meta property="og:description" content="Fast and free Facebook reels downloader. Download Facebook reels in high quality (HD) directly to your device. No login required.">
+    <meta property="og:image" content="https://fbviddl.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fbviddl.com/facebook-reel-download">
+    <meta property="twitter:title" content="Facebook Reels Downloader">
+    <meta property="twitter:description" content="Fast and free Facebook reels downloader. Download Facebook reels in high quality (HD) directly to your device. No login required.">
+    <meta property="twitter:image" content="https://fbviddl.com/og-image.jpg">
+
+    <link rel="canonical" href="https://fbviddl.com/facebook-reel-download">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+   
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FBviddl Facebook Reels Downloader",
+      "operatingSystem": "Windows, macOS, Android, iOS",
+      "applicationCategory": "UtilitiesApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "8500"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://fbviddl.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Facebook Reels Downloader",
+        "item": "https://fbviddl.com/facebook-reel-download"
+      }]
+    }
+    </script>
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="/" class="flex items-center space-x-2 group">
+                  <div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
+    <img src="https://fbviddl.com/FBDL.png" alt="FBviddl Logo" class="w-6 h-6 object-contain">
+</div>
+                    <span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class="text-blue-600">viddl</span></span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <a href="/facebook-reel-download" class="text-blue-600 font-bold">Facebook Reel Download</a>
+                    <a href="/about" class="hover:text-blue-600 transition-colors">About</a>
+                    <a href="/contact" class="hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-white z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
+            <div class="flex flex-col h-full">
+                <div class="h-16 flex items-center justify-between px-6 border-b border-gray-100">
+                    <a href="/" class="flex items-center space-x-2">
+                        <div class="bg-blue-600 p-1 rounded-lg">
+                            <svg class="text-white w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </div>
+                        <span class="text-base font-bold text-gray-900 tracking-tight">FB<span class="text-blue-600">viddl</span></span>
+                    </a>
+                    <button id="closeMenuBtn" class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-grow overflow-y-auto">
+                    <nav class="flex flex-col">
+                        <a href="/" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            Home
+                        </a>
+                        <a href="/facebook-reel-download" class="flex items-center px-6 py-4 text-blue-600 font-bold bg-gray-50 border-b border-gray-100 transition-all">
+                            Facebook Reel Download
+                        </a>
+                        <a href="/about" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            About
+                        </a>
+                        <a href="/contact" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Downloader Section -->
+    <section id="downloader" class="py-16 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">Facebook Reel Downloader</h1>
+            
+
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 mb-12">
+                <form id="downloadForm" method="POST" class="flex flex-col md:flex-row gap-4">
+                    <div class="relative flex-grow">
+                        <input
+                            type="text"
+                            id="videoUrl"
+                            placeholder="Paste Facebook reel link here..."
+                            class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition-all text-gray-800 placeholder-gray-400"
+                            required
+                        >
+                    </div>
+                    <button
+                        type="submit"
+                        id="submitBtn"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition-all flex items-center justify-center space-x-2 shadow-lg shadow-blue-200"
+                    >
+                        <span id="btnText">Download</span>
+                        <div id="btnLoader" class="hidden animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
+                    </button>
+                </form>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="hidden mt-6 p-4 bg-red-50 text-red-600 rounded-xl flex items-center space-x-3 text-sm font-medium border border-red-100 text-left">
+                    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span id="errorText"></span>
+                </div>
+
+                <!-- Result Section -->
+                <div id="resultSection" class="hidden mt-8 pt-8 border-t border-gray-100">
+                    <!-- Video Preview -->
+                    <div class="mb-8 overflow-hidden rounded-2xl border border-gray-200 shadow-lg bg-black aspect-video flex items-center justify-center relative">
+                        <video id="videoPreview" controls class="w-full h-full max-h-[400px] object-contain">
+                            <source id="videoSource" src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="flex items-center justify-center space-x-2 text-green-600 mb-6">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-bold">Video Found! Choose Quality:</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a id="hdDownload" href="#" download="facebook-video-hd.mp4" class="hidden flex items-center justify-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition-all shadow-md">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            <span>Download HD (High Quality)</span>
+                        </a>
+                        <a id="sdDownload" href="#" download="facebook-video-sd.mp4" class="hidden flex items-center justify-center space-x-3 bg-gray-800 hover:bg-gray-900 text-white py-4 rounded-2xl font-bold transition-all shadow-md">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            <span>Download SD (Normal Quality)</span>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-xs text-gray-400">Tip: If the download doesn't start, right-click the button and select "Save link as..."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 space-y-12">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Save Facebook Reels in Good Quality</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Short videos on Facebook Reels grabbed attention fast. Not just fun bits but how-tos too spread quick through feeds. Yet a steady gap sticks around - saving them isn’t built in. Watching again means loading each time. No tap or trick lets you keep copies handy without connection. Even though people share widely, access stays tied to internet reach. The feature list skips download ability entirely. Streams play smooth - but vanish when signal drops. Repeated views? Always need data behind them. Offline storage simply does not exist here yet.
+
+Imagine grabbing Reels fast, no hassle. 
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                  A tool steps in, works straight - no sign-in, no extra apps. High-quality saves land right on your phone. Rather than streaming each time, pull up videos offline, anytime you feel like it.
+
+Most people find these tools straightforward. No experience? That’s fine - nothing complex stands in the way. Start by grabbing the reel's address, then shift it over to the tool’s box instead of clicking around endlessly. Pick how sharp you want the picture before hitting go. Soon enough, a ready-to-save version appears without delays.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Downloading Facebook Reels Keeps Videos Accessible Offline</h2>
+                <p class="text-gray-600 leading-relaxed">
+                   Most of the time, streaming runs smoothly if the internet stays strong - yet stutters whenever speed drops or cuts out. When connections weaken, people often wait through pauses in playback. Videos vanish sometimes too, either taken down or switched to private, cutting off what was once available.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                    Saved videos stick around, so there is no need to worry about losing them later. When stored locally, they play without waiting for downloads. Moving through places with spotty signal becomes less of a problem. Watching at your own pace happens naturally, since the file already lives on the device. Even far from Wi-Fi, the clip runs just fine.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+          Most people grab reels just to save time. Jumping between apps, clicking links over and over - those things wear thin fast. Skip the hassle by keeping videos right on your device.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">How a Facebook Reels downloader works</h2>
+                <p class="text-gray-600 leading-relaxed">
+                  Most times, while viewing a reel on Facebook, the video data is already moving through your connection. Not by streaming but by saving it directly, a Reels downloader captures this flow before playback happens. 
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+The moment you choose to keep one, it shifts what was temporary into something solid - a file stored locally. What ends up saved often lands as an MP4, ready to exist beyond the app.
+
+What matters most? The video stays exactly as it was first shared. Instead of changing anything, a solid tool just pulls the existing version into a format you can actually use.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                    That way, the clarity matches the source almost perfectly.
+
+Running through the web means zero installations sit on your machine. Right inside your browser, each step unfolds - simple, quick, working just the same whether you’re on a phone, tablet, or computer.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">High Quality Downloads Without Compromise</h2>
+                <p class="text-gray-600 leading-relaxed">
+                 Blurry footage feels cheap, particularly on big displays or during repeat use. What sticks is sharpness - that detail holds worth over time. Starting clear means staying useful later down the line.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                 Most tools made for grabbing Facebook Reels will check what resolution is offered. When the source clip streams sharp, the saved copy can match its crisp look - provided the software grabs it right. Clarity stays true only if the tool pulls from the highest tier present.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                   If just basic quality exists, it gives that version - no fake upgrades or downgrades applied. What gets saved matches the source exactly.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Download Facebook Reels to watch without internet</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Most people like saving reels because they work even when there is no connection. When the file stays on your device, playback happens whenever you want, regardless of network conditions.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+For people always on the move or stuck with spotty internet, this works well. Without needing to stream, a handful of saved videos means access never drops.
+
+Start to finish, videos run without a single pause when watched offline. Smooth playback happens because there is no waiting for loading or breaks in the stream.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Downloaded Reels Available on All Devices</h2>
+                <p class="text-gray-600 leading-relaxed">
+Opening a downloaded reel saved as MP4 works on nearly every gadget around. Phones, tablets, laptops - none of them struggle with playback. Special apps aren’t needed just to view what you’ve grabbed.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                   Whatever device you’re using, moving videos around stays simple. Need to save one for tomorrow? Go ahead. Maybe tweak it a bit? That works too. Locked into one app or site won’t slow you down here. Options open up when formats don’t tie your hands.
+                </p>
+                
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">A Practical Way to Handle Daily Tasks</h2>
+                <p class="text-gray-600 leading-relaxed">
+  Most people just scroll past reels. Yet saving them changes how you use what you watch. Streaming needs constant internet. This doesn’t care about connection speed. One tap holds onto clips others might lose. Content stays put even when links break. Control shifts back to the person viewing. No login required. No waiting needed.
+
+With a personal library of clips, people skip constant searching. Access stays steady even when signals falter. Enjoyment grows along with smoother use. Efficiency rises because everything waits just where it should.
+                </p>
+            </div>
+           <div>
+                
+        
+
+
+
+        </div>
+    </section>
+  
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12"> FAQ - Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2">Why does the reel link sometimes show “no video found”?</h3>
+                    <p class="text-gray-600">A Facebook reel link might not lead straight to the video file. Instead of a direct path, some take detours through temporary addresses. When the tool fails to follow where that address really goes, nothing shows up. Try loading the reel completely in your web browser first. Grabbing the full address from there often solves the problem.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2">Why do some reels download instantly while others take longer?</h3>
+                    <p class="text-gray-600">Most of the time, speed comes down to what Facebook decides for each clip. Tiny clips sprint in fast - lightweight files move quick. Heavy or sharp videos drag steps; they ask more from the system while loading unseen layers. The platform picks its pace based on hidden demands.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2">Why is there no HD option for certain reels?</h3>
+                    <p class="text-gray-600">Some reels start out blurry - no magic fix later. What sits on Facebook is what you get, nothing sharper hiding behind the scenes. Files pulled down stay true to that original, grainy or clear. Enhancement? Not happening here. Servers don’t invent detail that wasn’t saved before.</p>
+                </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg mb-2">What makes the preview run fine while the download link just stops?</h3>
+                        <p class="text-gray-600">Most times, seeing a video just takes a quick connection. Yet getting it saved needs a lasting address. When Facebook swaps that address fast, the save option might fail. Even if the clip plays fine before your eyes.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg mb-2">Is it possible to grab reels from locked profiles using this website?</h3>
+                        <p class="text-gray-600">Only public reels can be processed - private ones stay locked away. Access depends entirely on whether the content sits behind login walls or not. When visibility is limited, outside tools hit a wall. Public availability acts as the key for external access methods.</p>
+                     </div>
+                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg mb-2">Why do I sometimes get redirected or see errors after clicking download?</h3>
+                        <p class="text-gray-600">Strange pages popping up? Browser add-ons might be stepping in. A fresh tab sometimes fixes things right away. Network hiccups can twist what loads too. Try turning off those extras - clarity usually follows.</p>
+
+                     </div>
+                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg mb-2">Why does the same reel work today but fail later?</h3>
+                        <p class="text-gray-600">One moment a reel might be there - next, gone without warning. When Facebook pulls something down or locks it behind privacy settings, access slips away. Changes to how links are built break the path entirely. The tool just stops working when that happens.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="col-span-1">
+                    <a href="/" class="flex items-center space-x-2 mb-6 group">
+                        <div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
+    <img src="https://fbviddl.com/FBDL.png" alt="FBviddl Logo" class="w-6 h-6 object-contain">
+</div>
+                        <span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class="text-blue-600">viddl.com</span></span>
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        The fastest and most reliable way to download Facebook videos and reels in HD quality. Free, secure, and easy to use.
+                    </p>
+                    <div class="pt-6 border-t border-gray-100">
+                        <h4 class="text-xs font-bold text-gray-900 mb-4">DISCLAIMER</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed italic">
+                            FBviddl is not affiliated with Meta or Facebook. We do not host any videos on our servers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-6">PRODUCT</h4>
+                    <ul class="space-y-6">
+                        <li><a href="/#downloader" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>Downloader</a></li>
+                        <li><a href="/#guide" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>How to Use</a></li>
+                        <li><a href="/#faq" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>FAQ</a></li>
+                        <li><a href="/about" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-6">LEGAL & CONTACT</h4>
+                    <ul class="space-y-6">
+                        <li><a href="/privacy" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
+                        <li><a href="/terms" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">© 2026 FBviddl. All rights reserved.</p>
+                <div class="flex items-center space-x-2">
+               
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="/menu.js"></script>
+</body>
+</html>
