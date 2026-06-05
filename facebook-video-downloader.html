@@ -23,9 +23,9 @@
 <link rel=icon type=image/x-icon href=/favicon.ico>
 <link rel=stylesheet href=/romitstylemin.css/romitfv.css>
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<style>body{font-family:Inter,sans-serif}</style>
+<style>body{font-family:Inter,sans-serif} nav, #mobileMenu { backdrop-filter: none !important; background-color: rgb(0, 0, 0) !important; }</style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-black text-white">
 <script type=application/ld+json>
 {
       "@context": "https://schema.org",
@@ -79,25 +79,24 @@
       }]
     }
 </script>
-<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16 items-center">
 <a href=/ class="flex items-center space-x-2 group">
-<div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
-<img src=https://fbviddl.com/FBDL.png alt="FBviddl Logo" class="w-6 h-6 object-contain">
-</div>
-<span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class=text-blue-600>viddl</span></span>
+<span class="text-xl font-bold text-white tracking-tight">FBvid<span class=text-blue-400>dl.com</span></span>
 </a>
-<div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-<a href=/ class="text-blue-600 font-bold">Home</a>
-<a href=/facebook-video-downloader class="hover:text-blue-600 transition-colors">Video Downloader</a>
-<a href=/facebook-reel-download class="hover:text-blue-600 transition-colors">Facebook Reel Download</a>
-<a href=/facebook-dp-downloader class="hover:text-blue-600 transition-colors">Facebook DP Downloader</a>
-<a href="https://threadsgrab.com/" class="hover:text-blue-600 transition-colors">threads Downloader</a>
-<a href=/about class="hover:text-blue-600 transition-colors">About</a>
-<a href=/contact class="hover:text-blue-600 transition-colors">Contact</a>
+<div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+<a href=/ class="text-blue-400 font-bold">Home</a>
+<a href=/fbdown class="hover:text-blue-400 transition-colors">FBDown</a>
+<a href=/facebook-video-downloader class="hover:text-blue-400 transition-colors">Video Downloader</a>
+<a href=/facebook-reel-download class="hover:text-blue-400 transition-colors">Facebook Reel Download</a>
+<a href=/facebook-dp-downloader class="hover:text-blue-400 transition-colors">Facebook DP Downloader</a>
+<a href="https://threadsgrab.com/" class="hover:text-blue-400 transition-colors">threads Downloader</a>
+<a href=/about class="hover:text-blue-400 transition-colors">About</a>
+<a href=/contact class="hover:text-blue-400 transition-colors">Contact</a>
+<a href=/blog class="hover:text-blue-400 transition-colors">Blog</a>
 </div>
-<button id=mobileMenuBtn class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=mobileMenuBtn class="md:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors">
 <svg id=menuIcon class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
@@ -107,16 +106,16 @@
 </button>
 </div>
 </div>
-<div id=mobileMenu class="hidden md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-white z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
+<div id=mobileMenu class="hidden md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-gray-900 z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
 <div class="flex flex-col h-full">
-<div class="h-16 flex items-center justify-between px-6 border-b border-gray-100">
+<div class="h-16 flex items-center justify-between px-6 border-b border-gray-800">
 <a href=# class="flex items-center space-x-2">
 <div class="bg-blue-600 p-1 rounded-lg">
 <svg class="text-white w-4 h-4" width=16 height=16 fill=currentColor viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 </div>
-<span class="text-base font-bold text-gray-900 tracking-tight">FB<span class=text-blue-600>viddl</span></span>
+<span class="text-base font-bold text-white tracking-tight">FBvid<span class=text-blue-400>dl</span></span>
 </a>
-<button id=closeMenuBtn class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=closeMenuBtn class="p-2 text-gray-300 hover:text-blue-400 transition-colors">
 <svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
 </svg>
@@ -124,26 +123,32 @@
 </div>
 <div class="flex-grow overflow-y-auto">
 <nav class="flex flex-col">
-<a href=/ class="flex items-center px-6 py-4 text-blue-600 font-bold bg-gray-50 border-b border-gray-100 transition-all">
+<a href=/ class="flex items-center px-6 py-4 text-blue-400 font-bold bg-black border-b border-gray-800 transition-all">
 Home
 </a>
-<a href=/facebook-video-downloader class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/fbdown class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
+FBDown
+</a>
+<a href=/facebook-video-downloader class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Video Downloader
 </a>
-<a href=/facebook-reel-download class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/facebook-reel-download class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Facebook Reel Download
 </a>
-<a href=/facebook-dp-downloader class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/facebook-dp-downloader class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Facebook DP Downloader
 </a>
-<a href="https://threadsgrab.com/" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href="https://threadsgrab.com/" class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Threads Downloader
 </a>
-<a href=/about class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/about class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 About
 </a>
-<a href=/contact class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/contact class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Contact
+</a>
+<a href=/blog class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
+Blog
 </a>
 </nav>
 </div>
@@ -152,30 +157,30 @@ Contact
 </nav>
 <section id=downloader class="py-16 px-4">
 <div class="max-w-3xl mx-auto text-center">
-<h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">Facebook Video Downloader</h1>
+<h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Facebook Video Downloader</h1>
 
-<div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 mb-12">
+<div class="bg-gray-900 p-6 md:p-8 rounded-3xl shadow-xl border border-gray-800 mb-12">
 <form id=downloadForm method=POST class="flex flex-col md:flex-row gap-4">
 <div class="relative flex-grow">
-<input id=videoUrl placeholder="Paste Facebook video link here..." class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition-all text-gray-800 placeholder-gray-400" required>
+<input id=videoUrl placeholder="Paste Facebook video link here..." class="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-2xl focus:ring-4 focus:ring-blue-500/30 focus:border-blue-500 outline-none transition-all text-white placeholder-gray-500" required>
 </div>
 <button type=submit id=submitBtn class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition-all flex items-center justify-center space-x-2 shadow-lg shadow-blue-200">
 <span id=btnText>Download</span>
 <div id=btnLoader class="hidden animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
 </button>
 </form>
-<div id=errorMessage class="hidden mt-6 p-4 bg-red-50 text-red-600 rounded-xl flex items-center space-x-3 text-sm font-medium border border-red-100 text-left">
+<div id=errorMessage class="hidden mt-6 p-4 bg-red-900/30 text-red-400 rounded-xl flex items-center space-x-3 text-sm font-medium border border-red-800 text-left">
 <svg class="w-5 h-5 flex-shrink-0" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <span id=errorText></span>
 </div>
-<div id=resultSection class="hidden mt-8 pt-8 border-t border-gray-100">
-<div class="mb-8 overflow-hidden rounded-2xl border border-gray-200 shadow-lg bg-black aspect-video flex items-center justify-center relative">
+<div id=resultSection class="hidden mt-8 pt-8 border-t border-gray-800">
+<div class="mb-8 overflow-hidden rounded-2xl border border-gray-700 shadow-lg bg-black aspect-video flex items-center justify-center relative">
 <video id=videoPreview controls class="w-full h-full max-h-[400px] object-contain">
 <source id=videoSource src="" type=video/mp4>
 Your browser does not support the video tag.
 </video>
 </div>
-<div class="flex items-center justify-center space-x-2 text-green-600 mb-6">
+<div class="flex items-center justify-center space-x-2 text-green-400 mb-6">
 <svg class="w-5 h-5" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <span class=font-bold>Video Found! Choose Quality:</span>
 </div>
@@ -195,117 +200,117 @@ Your browser does not support the video tag.
 </div>
 </section>
 
-<section class="py-16 bg-white">
+<section class="py-16 bg-gray-900">
 <div class="max-w-3xl mx-auto px-4 space-y-12">
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Facebook Video Downloader: Save Videos Directly for Offline Use</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Facebook Video Downloader: Save Videos Directly for Offline Use</h2>
+<p class="text-gray-300 leading-relaxed">
 
 The problem with using Facebook to browse through the feed is that there are so many videos. You can find videos you care about and want to save for later (sometimes just for fun), only to see them disappear back into the feed.
 
 This is where the benefit of using a Facebook video downloader comes into play.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 Instead of trying to remember what post contained the video you wanted to save, once you have the link, the video is no longer connected to Facebook. Now it's yours and can be viewed anytime, anywhere, and stored without worrying about how good the Internet speed is at that moment or whether the video will still exist on Facebook.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
     This is not about changing how any of these videos would be displayed; they will keep the same video format, etc. It's merely making a copy of the streamed video/file instead of getting a second copy.</p>
 </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">HD and SD Quality Options Explained</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">HD and SD Quality Options Explained</h2>
+<p class="text-gray-300 leading-relaxed">
 The distinctions between HD and SD quality for a Facebook video downloader may be clear and straightforward; but sometimes people use different terms to mean the same thing.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 
 While the video downloader does not create new and/or higher quality videos; they simply provide access to already existing video content at low, medium and/or high quality.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 Depending upon which of these three types of quality is available for video downloads on Facebook will generally determine whether a video's quality will be displayed as HD or SD on a video downloader's application.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">When either HD or SD appears on a video download application; this indicates whether that particular video supports either HD or not. If HD does not appear, then neither does HD support. Therefore; both the application has established realistic expectations and the results are identical.</p>
+<p class="text-gray-300 leading-relaxed mt-4">When either HD or SD appears on a video download application; this indicates whether that particular video supports either HD or not. If HD does not appear, then neither does HD support. Therefore; both the application has established realistic expectations and the results are identical.</p>
 
 </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Save Facebook Videos in a Few Simple Steps.</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Save Facebook Videos in a Few Simple Steps.</h2>
+<p class="text-gray-300 leading-relaxed">
 This tool is meant to be simple; copy the Facebook video you want to download, then paste its URL into the downloader, and you will have access to download it shortly after you do so.
 
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 The process of downloading Facebook videos is simple; there are no lengthy or complicated instructions, and no confusing options to choose from, and no software installation is required to use the downloader; it is all done right in your web browser, and can easily be used on any type of device, whether you are on a PC, laptop, or mobile device, using the same experience regardless of what device you are using.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 What is useful about the simplicity of Facebook video downloader from my experience is that it works day-to-day.
 </p>
 </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Watch Facebook Videos When Not Connected to Internet.</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Watch Facebook Videos When Not Connected to Internet.</h2>
+<p class="text-gray-300 leading-relaxed">
 After you have downloaded a video, the video will not have any relationship with how fast you can access the internet to watch the video. You can also watch the video at any point in time, regardless of whether you are connected to the internet or have a weak connection to the internet.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 This is especially useful when you want to keep important videos, tutorials; or, videos that could be useful to you in the future without having to rely on streaming the videos over again. The video downloader for facebook allows you to change your connection to the internet from temporary access to permanent access.
 </p>
 </div>
 
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Quality Control Meets User Expectation</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Quality Control Meets User Expectation</h2>
+<p class="text-gray-300 leading-relaxed">
 A person grabs a video they find online hoping it looks just like what was shared. When someone puts up an HD clip, the copy saved later ought to stay sharp. Blurry results feel off. Compression that squashes detail without reason misses the point. What comes out needs to mirror what went in.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 From the start, a well-built setup spots stream qualities it can access, matching choices to the source's true sharpness. Because of this, the video stays practical - whether you’re watching, passing along, or adjusting it.
 </p>
-<p class="text-gray-600 leading-relaxed mt-4">
+<p class="text-gray-300 leading-relaxed mt-4">
 A shaky result makes people doubt the tool right away.
 </p>
 </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">The Value of a Reliable Facebook Video Downloader</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">The Value of a Reliable Facebook Video Downloader</h2>
+<p class="text-gray-300 leading-relaxed">
 A dependable downloader isn’t just about getting files - it’s about trust. When someone finds a tool that works, they rely on it for important content. Whether it’s a tutorial, a memorable moment, or something educational, the right downloader becomes a go-to resource.
 </p>
 </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Privacy Expectations from Users</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Privacy Expectations from Users</h2>
+<p class="text-gray-300 leading-relaxed">
 When people feel unsure, they step back. Tools needing logins often get left behind. Permission requests can spark hesitation instead of engagement. A working video tool grabs clips straight - no login needed. Public links alone move through its system, leaving personal details untouched. Data stays out of storage, floating free each time. Users feel secure when things work the same way every time.
 </p>
 </div>
 </div>
 </section>
-<section id=faq class="py-16 bg-gray-50">
+<section id=faq class="py-16 bg-black">
 <div class="max-w-3xl mx-auto px-4">
-<h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+<h2 class="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
 <div class=space-y-6>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Some Facebook videos can't be downloaded?</h3>
-<p class=text-gray-600>Most links to videos do not point straight at files you can save. When access needs a sign-in or the source is locked down, grabbing content fails. Private accounts often block outside tools completely. Without open sharing, the system cannot pull anything through.</p>
+<p class=text-gray-300>Most links to videos do not point straight at files you can save. When access needs a sign-in or the source is locked down, grabbing content fails. Private accounts often block outside tools completely. Without open sharing, the system cannot pull anything through.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Why do I only see SD quality instead of HD?</h3>
-<p class=text-gray-600>Depending on the upload method, what you get might differ. Should the clip have arrived without HD clarity, any sharper copy simply isn’t waiting to be pulled.</p>
+<p class=text-gray-300>Depending on the upload method, what you get might differ. Should the clip have arrived without HD clarity, any sharper copy simply isn’t waiting to be pulled.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">What's causing the delay in loading or downloading the video?</h3>
-<p class=text-gray-600>Big videos take longer to handle, particularly when the internet drags its feet. Usually, just pausing briefly helps - sometimes hitting retry does too. A moment’s wait often clears things up on its own.</p>
+<p class=text-gray-300>Big videos take longer to handle, particularly when the internet drags its feet. Usually, just pausing briefly helps - sometimes hitting retry does too. A moment’s wait often clears things up on its own.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Why does the video play instead of downloading?</h3>
-<p class=text-gray-600>Most times, clips pop up right inside the browser rather than save straight away. When this occurs, go ahead and pick the “Save video as” choice so it lands safely on your machine.</p>
+<p class=text-gray-300>Most times, clips pop up right inside the browser rather than save straight away. When this occurs, go ahead and pick the “Save video as” choice so it lands safely on your machine.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Downloading Facebook Live and new videos?</h3>
-<p class=text-gray-600>Right now, live footage often waits in line to process on Facebook. Only after that finishes can anyone grab a copy. A stream that ended moments ago? It sits there, quiet, until the system catches up. Things move slowly when files are fresh.</p>
+<p class=text-gray-300>Right now, live footage often waits in line to process on Facebook. Only after that finishes can anyone grab a copy. A stream that ended moments ago? It sits there, quiet, until the system catches up. Things move slowly when files are fresh.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">What makes a video succeed today but fail tomorrow?</h3>
-<p class=text-gray-600>Now and then, Facebook tweaks how videos reach users. When a link fails, grabbing it fresh from the original post usually does the trick.</p>
+<p class=text-gray-300>Now and then, Facebook tweaks how videos reach users. When a link fails, grabbing it fresh from the original post usually does the trick.</p>
 </div>
 </div>
 </div></section>
-<footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+<footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 <div class=col-span-1>
@@ -313,44 +318,44 @@ When people feel unsure, they step back. Tools needing logins often get left beh
 <div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
 <img src=https://fbviddl.com/FBDL.png alt="FBviddl Logo" class="w-6 h-6 object-contain">
 </div>
-<span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class=text-blue-600>viddl.com</span></span>
+<span class="text-xl font-bold text-white tracking-tight">FBvid<span class=text-blue-400>dl.com</span></span>
 </a>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
 The fastest and most reliable way to download Facebook videos and reels in HD quality. Free, secure, and easy to use.
 </p>
-<div class="pt-6 border-t border-gray-100">
-<h4 class="text-xs font-bold text-gray-900 mb-4">DISCLAIMER</h4>
+<div class="pt-6 border-t border-gray-800">
+<h4 class="text-xs font-bold text-white mb-4">DISCLAIMER</h4>
 <p class="text-gray-400 text-xs leading-relaxed italic">
 FBviddl is not affiliated with Meta or Facebook. We do not host any videos on our servers.
 </p>
 </div>
 </div>
 <div>
-<h4 class="text-sm font-bold text-gray-900 mb-6">PRODUCT</h4>
+<h4 class="text-sm font-bold text-white mb-6">PRODUCT</h4>
 <ul class=space-y-6>
 
-<li><a href=/facebook-reel-download class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Reels Downloader</a></li>
-<li><a href=/facebook-dp-downloader class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>DP Downloader</a></li>
-<li><a href=/about class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>About Us</a></li>
+<li><a href=/facebook-reel-download class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Reels Downloader</a></li>
+<li><a href=/facebok-dp-downloader class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>DP Downloader</a></li>
+<li><a href=/about class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>About Us</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-sm font-bold text-gray-900 mb-6">LEGAL & CONTACT</h4>
+<h4 class="text-sm font-bold text-white mb-6">LEGAL & CONTACT</h4>
 <ul class=space-y-6>
-<li><a href=/privacy class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
-<li><a href=/terms class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
-<li><a href=/contact class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
+<li><a href=/privacy class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
+<li><a href=/terms class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
+<li><a href=/contact class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
 </ul>
 </div>
 </div>
-<div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-500 text-sm">© 2026 FBviddl. All rights reserved.</p>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2026 FBviddl. All rights reserved.</p>
 <div class="flex items-center space-x-2">
 </div>
 </div>
 </div>
 </footer>
-<script src=/romitscript.min/fbvid.js></script>
+<script src=/romitscript.min/romitfbv.min.js></script>
 <script src=/romitscript.min/menu.js></script>
 </body>
 </html>

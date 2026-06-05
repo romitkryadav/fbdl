@@ -59,28 +59,27 @@
 </script>
 <link rel=stylesheet href=/romitstylemin.css/romitfv.css>
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<style>body{font-family:Inter,sans-serif}</style>
+<style>body{font-family:Inter,sans-serif} nav, #mobileMenu { backdrop-filter: none !important; background-color: rgb(0, 0, 0) !important; }</style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<body class="bg-black text-white">
+<nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16 items-center">
 <a href=/ class="flex items-center space-x-2 group">
-<div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
-<img src=https://fbviddl.com/FBDL.png alt="FBviddl Logo" class="w-6 h-6 object-contain">
-</div>
-<span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class=text-blue-600>viddl</span></span>
+<span class="text-xl font-bold text-white tracking-tight">FBvid<span class=text-blue-400>dl.com</span></span>
 </a>
-<div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-<a href=/ class="hover:text-blue-600 transition-colors">Home</a>
-<a href=/facebook-video-downloader class="hover:text-blue-600 transition-colors">Video Downloader</a>
-<a href=/facebook-reel-download class="hover:text-blue-600 transition-colors">Facebook Reel Download</a>
-<a href=/facebook-dp-downloader class="text-blue-600 font-bold">DP Downloader</a>
-<a href="https://threadsgrab.com/" class="hover:text-blue-600 transition-colors">threads Downloader</a>
-<a href=/about class="hover:text-blue-600 transition-colors">About</a>
-<a href=/contact class="hover:text-blue-600 transition-colors">Contact</a>
+<div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+<a href=/ class="hover:text-blue-400 transition-colors">Home</a>
+<a href=/fbdown class="hover:text-blue-400 transition-colors">FBDown</a>
+<a href=/facebook-video-downloader class="hover:text-blue-400 transition-colors">Video Downloader</a>
+<a href=/facebook-reel-download class="hover:text-blue-400 transition-colors">Facebook Reel Download</a>
+<a href=/facebook-dp-downloader class="text-blue-400 font-bold">DP Downloader</a>
+<a href="https://threadsgrab.com/" class="hover:text-blue-400 transition-colors">threads Downloader</a>
+<a href=/about class="hover:text-blue-400 transition-colors">About</a>
+<a href=/contact class="hover:text-blue-400 transition-colors">Contact</a>
+<a href=/blog class="hover:text-blue-400 transition-colors">Blog</a>
 </div>
-<button id=mobileMenuBtn class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=mobileMenuBtn class="md:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors">
 <svg id=menuIcon class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
@@ -90,16 +89,13 @@
 </button>
 </div>
 </div>
-<div id=mobileMenu class="hidden md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-white z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
+<div id=mobileMenu class="hidden md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-gray-900 z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
 <div class="flex flex-col h-full">
-<div class="h-16 flex items-center justify-between px-6 border-b border-gray-100">
+<div class="h-16 flex items-center justify-between px-6 border-b border-gray-800">
 <a href=# class="flex items-center space-x-2">
-<div class="bg-blue-600 p-1 rounded-lg">
-<svg class="text-white w-4 h-4" width=16 height=16 fill=currentColor viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-</div>
-<span class="text-base font-bold text-gray-900 tracking-tight">FB<span class=text-blue-600>viddl</span></span>
+<span class="text-base font-bold text-white tracking-tight">FBvid<span class=text-blue-400>dl.com</span></span>
 </a>
-<button id=closeMenuBtn class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=closeMenuBtn class="p-2 text-gray-300 hover:text-blue-400 transition-colors">
 <svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
 </svg>
@@ -107,26 +103,32 @@
 </div>
 <div class="flex-grow overflow-y-auto">
 <nav class="flex flex-col">
-<a href=/ class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/ class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Home
 </a>
-<a href=/facebook-video-downloader class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/fbdown class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
+FBDown
+</a>
+<a href=/facebook-video-downloader class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Video Downloader
 </a>
-<a href=/facebook-reel-download class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/facebook-reel-download class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Facebook Reel Download
 </a>
-<a href=/facebook-dp-downloader class="flex items-center px-6 py-4 text-blue-600 font-bold bg-gray-50 border-b border-gray-100 transition-all">
+<a href=/facebook-dp-downloader class="flex items-center px-6 py-4 text-blue-400 font-bold bg-black border-b border-gray-800 transition-all">
 DP Downloader
 </a>
-<a href="https://threadsgrab.com/" class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href="https://threadsgrab.com/" class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Threads Downloader
 </a>
-<a href=/about class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/about class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 About
 </a>
-<a href=/contact class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/contact class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
 Contact
+</a>
+<a href=/blog class="flex items-center px-6 py-4 text-white font-medium hover:bg-black hover:text-blue-400 border-b border-gray-800 transition-all">
+Blog
 </a>
 </nav>
 </div>
@@ -135,23 +137,23 @@ Contact
 </nav>
 <section id=downloader class="py-16 px-4">
 <div class="max-w-3xl mx-auto text-center">
-<h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">Facebook DP Downloader</h1>
+<h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Facebook DP Downloader</h1>
 
-<div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 mb-12">
+<div class="bg-gray-900 p-6 md:p-8 rounded-3xl shadow-xl border border-gray-800 mb-12">
 <div class="flex flex-col md:flex-row gap-4">
 <div class="relative flex-grow">
-<input id=fbUrlInput placeholder="Paste Facebook profile URL here..." class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition-all text-gray-800 placeholder-gray-400 pr-24" required>
+<input id=fbUrlInput placeholder="Paste Facebook profile URL here..." class="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-2xl focus:ring-4 focus:ring-blue-500/30 focus:border-blue-500 outline-none transition-all text-white placeholder-gray-500 pr-24" required>
 </div>
 <button id=downloadBtn class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition-all flex items-center justify-center space-x-2 shadow-lg shadow-blue-200">
 <span id=btnText>Download HD DP</span>
 <div id=loader class="hidden animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
 </button>
 </div>
-<div id=errorMessage class="hidden mt-6 p-4 bg-red-50 text-red-600 rounded-xl flex items-center space-x-3 text-sm font-medium border border-red-100 text-left">
+<div id=errorMessage class="hidden mt-6 p-4 bg-red-900/30 text-red-400 rounded-xl flex items-center space-x-3 text-sm font-medium border border-red-800 text-left">
 <svg class="w-5 h-5 flex-shrink-0" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <span id=errorText></span>
 </div>
-<div id=resultSection class="hidden mt-8 pt-8 border-t border-gray-100">
+<div id=resultSection class="hidden mt-8 pt-8 border-t border-gray-800">
 <div class="mb-8 flex flex-col items-center">
 <div class=relative>
 <div class="absolute inset-0 bg-blue-600 blur-3xl opacity-10 rounded-full"></div>
@@ -175,141 +177,138 @@ Contact
 </div>
 </div>
 </section>
-<section class="py-16 bg-white">
+<section class="py-16 bg-gray-900">
 <div class="max-w-3xl mx-auto px-4 space-y-12">
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Facebook Profile Picture Downloader (HD) – View & Download Full Size DP</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Facebook Profile Picture Downloader (HD) – View & Download Full Size DP</h2>
+<p class="text-gray-300 leading-relaxed">
 Profile pictures on Facebook are often one of the first things people will see when they search for you on Facebook; however, they can only be viewed in low pixel resolution. If you have ever opened one (a profile picture) to view it at its actual size or with high definition pixels, then you already know the frustration when trying to do so. Thus, having a Facebook profile picture downloader can be very helpful.
 </p>
-<p class="text-gray-600 leading-relaxed">A Facebook DP downloader allows you to download any Facebook profile picture at full size with high definition in just a few seconds. You don’t have to log into your Facebook account; you don’t have to download an application; and you don’t have to go through complicated steps! Simply paste the profile link and the system retrieves the full-sized profile picture for you.
+<p class="text-gray-300 leading-relaxed">A Facebook DP downloader allows you to download any Facebook profile picture at full size with high definition in just a few seconds. You don’t have to log into your Facebook account; you don’t have to download an application; and you don’t have to go through complicated steps! Simply paste the profile link and the system retrieves the full-sized profile picture for you.
 </p>
 </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">What Is a Facebook DP Downloader?</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">What Is a Facebook DP Downloader?</h2>
+<p class="text-gray-300 leading-relaxed">
 Facebook DP Downloader is used to extract & visualize Profile Pics at higher resolutions than what they are normally seen at.
 
 Facebook limits the size of Profile Pics for the purpose of controlling bandwidth and privacy by displaying them at small sizes, especially on mobile devices.
 </p>
-<p class="text-gray-600 leading-relaxed">From an operational standpoint, this service reads publicly available profile data & retrieves the Display Pic in its original highest resolution.
+<p class="text-gray-300 leading-relaxed">From an operational standpoint, this service reads publicly available profile data & retrieves the Display Pic in its original highest resolution.
 
 Facebook DP Downloaders do not hack, bypass security, or access any private data. They simply make it easier for a user to obtain a higher quality view of images already available.
 
 Users no longer need to zoom into low-resolution images or take screenshots, which often lower resolution & quality, since they will now receive their desired high-quality resolution image immediately.</p> </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">How to Download Profile Pictures from Facebook</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">How to Download Profile Pictures from Facebook</h2>
+<p class="text-gray-300 leading-relaxed">
 The entire process was made easy for users! Complexity causes users an awful lot of grief. So here's what it looks like.
 
 
 Open Facebook and find the profile you want to get a picture of. When you do this, go to the "Link" (the URL) in the address bar and copy it, or use the share option to copy the link. Once you have the link copied, paste it into the download tool.
 </p>
-<p class="text-gray-600 leading-relaxed">Then click the download button. The download tool will find the profile picture based on the link and download the picture to your computer. A few seconds later, you will see the picture at full size, just as it appears on Facebook, ready for you to view or save.</p>
-<p class="text-gray-600 leading-relaxed">There are no hidden steps, no sign-ups, and no additional waiting around. If your downloader tool takes longer than a few seconds to finish then it is not designed properly. Users will not wait for anything too long.</p> </div>
+<p class="text-gray-300 leading-relaxed">Then click the download button. The download tool will find the profile picture based on the link and download the picture to your computer. A few seconds later, you will see the picture at full size, just as it appears on Facebook, ready for you to view or save.</p>
+<p class="text-gray-300 leading-relaxed">There are no hidden steps, no sign-ups, and no additional waiting around. If your downloader tool takes longer than a few seconds to finish then it is not designed properly. Users will not wait for anything too long.</p> </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Reasons Why People Download Facebook DP's</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Reasons Why People Download Facebook DP's</h2>
+<p class="text-gray-300 leading-relaxed">
 The most obvious reason given by users is that you can't easily access full-size profile pictures on Facebook. Most of the pictures on Facebook are either compressed or have limited resolution.
 - Most of the time, users access tools such as Facebook DP Downloaders to view pictures more accurately. For example, when someone needs to recognize somebody, receive an image as a keepsake, or simply be curious about something.
 </p>
-<p class="text-gray-600 leading-relaxed">Users want an easier way to do this by using the paste-and-go method to download pictures rather than using their own methods of finding images through their web browser or using software extensions.
+<p class="text-gray-300 leading-relaxed">Users want an easier way to do this by using the paste-and-go method to download pictures rather than using their own methods of finding images through their web browser or using software extensions.
 - Increase Demand for Quick Resolution and User Access via Tool Used to Resolve Problems without Downloading Tools or Applications.</p> </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Using Facebook profile pictures legally and ethically after download</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Using Facebook profile pictures legally and ethically after download</h2>
+<p class="text-gray-300 leading-relaxed">
 Most folks ask me the same thing over and over - can you legally grab someone’s Facebook profile pic? Truth is, it's allowed if the photo sits out in the open and nothing shady follows. If someone puts their picture up where everyone can view it, well, that means visitors aren’t breaking rules just by looking. Saving one of those photos isn’t odd at all - maybe for memory-keeping, maybe to sketch something later - all fine when intent stays clear.
 </p>
-<p class="text-gray-600 leading-relaxed">Just because a photo can be saved doesn’t mean it’s okay to pretend it’s yours. Using pictures to upset someone or make false claims crosses a line. Even if the image seems freely available, selling it or using it for business needs direct approval. Laws protecting creative work haven’t gone away. Tools that help download files aren’t taking sides - they just exist, like any online app. How people choose to use those photos stays on their conscience. Every screen carries a note urging kindness and honesty.</p>
+<p class="text-gray-300 leading-relaxed">Just because a photo can be saved doesn’t mean it’s okay to pretend it’s yours. Using pictures to upset someone or make false claims crosses a line. Even if the image seems freely available, selling it or using it for business needs direct approval. Laws protecting creative work haven’t gone away. Tools that help download files aren’t taking sides - they just exist, like any online app. How people choose to use those photos stays on their conscience. Every screen carries a note urging kindness and honesty.</p>
 </div>
 <div>
-<h2 class="text-2xl font-bold text-gray-900 mb-4">Features of My Facebook Profile Picture Downloader</h2>
-<p class="text-gray-600 leading-relaxed">
+<h2 class="text-2xl font-bold text-white mb-4">Features of My Facebook Profile Picture Downloader</h2>
+<p class="text-gray-300 leading-relaxed">
 Most tools like this one demand too much. Mine works without asking anything back. Start using it right away - no signup at all. Forget about logging in through social media sites either. Your details stay yours, never handed over. Another thing: clean results every time. Not a single mark ruins the output. Picture grabbers often slap on watermarks or links, messing up your goal of a pure copy. What lands in your folder matches Facebook's version - unchanged by extra layers or hidden tweaks.
 </p>
-<p class="text-gray-600 leading-relaxed">Free access stands at its core - no hidden fees ever show up. Paywalls? Premium tiers? Credit card asks? None exist here. Grabbing someone's public profile image ought to stay without charge, that feels right. Every device fits into place too - Windows machines, Macs, iPads, Android phones, iPhones - all welcome. Screen size shifts mean nothing; the layout adjusts itself quietly behind the scenes. Smooth runs every time, regardless of what you hold in hand. Speed matters here. Fetching usually wraps up in just a second or two since the code runs lean and tight.</p>
-<p class="text-gray-600 leading-relaxed">Picture this first: a clear look before any saving happens. Most tools just grab the file right away, blind to what's inside. Not here. The entire image shows up right in front of you. Take a closer look - stretch it larger, check every detail. Only after that comes the option to save. That way, nothing fuzzy slips through by mistake. Time stays protected from blurry results nobody wants.</p>
+<p class="text-gray-300 leading-relaxed">Free access stands at its core - no hidden fees ever show up. Paywalls? Premium tiers? Credit card asks? None exist here. Grabbing someone's public profile image ought to stay without charge, that feels right. Every device fits into place too - Windows machines, Macs, iPads, Android phones, iPhones - all welcome. Screen size shifts mean nothing; the layout adjusts itself quietly behind the scenes. Smooth runs every time, regardless of what you hold in hand. Speed matters here. Fetching usually wraps up in just a second or two since the code runs lean and tight.</p>
+<p class="text-gray-300 leading-relaxed">Picture this first: a clear look before any saving happens. Most tools just grab the file right away, blind to what's inside. Not here. The entire image shows up right in front of you. Take a closer look - stretch it larger, check every detail. Only after that comes the option to save. That way, nothing fuzzy slips through by mistake. Time stays protected from blurry results nobody wants.</p>
 </div>
 </div></section>
-<section id=faq class="py-16 bg-gray-50">
+<section id=faq class="py-16 bg-black">
 <div class="max-w-3xl mx-auto px-4">
-<h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+<h2 class="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
 <div class=space-y-6>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Can I download a profile picture from a private Facebook account? </h3>
-<p class=text-gray-600>Getting a photo from someone's hidden Facebook page isn't possible unless they share it. Access depends on their privacy settings being open enough. Without permission, the image stays locked away. Only visible photos can be saved by others. If the profile hides everything, nothing shows up at all Actually, it grabs just public profile pics. When someone locks their account and you’re not connected, there’s no way in. Built that way on purpose - keeps things private.</p>
+<p class=text-gray-300>Getting a photo from someone's hidden Facebook page isn't possible unless they share it. Access depends on their privacy settings being open enough. Without permission, the image stays locked away. Only visible photos can be saved by others. If the profile hides everything, nothing shows up at all Actually, it grabs just public profile pics. When someone locks their account and you’re not connected, there’s no way in. Built that way on purpose - keeps things private.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Why is the Facebook DP not loading or showing an error?</h3>
-<p class=text-gray-600>Usually a problem exists because either the user has set their profile to private, they used an invalid URL to access their profile picture, or because Facebook is blocking automated requests for some reason. To troubleshoot the problem, try refreshing the page, double-checking the profile URL you used, or waiting a few minutes then trying again.</p>
+<p class=text-gray-300>Usually a problem exists because either the user has set their profile to private, they used an invalid URL to access their profile picture, or because Facebook is blocking automated requests for some reason. To troubleshoot the problem, try refreshing the page, double-checking the profile URL you used, or waiting a few minutes then trying again.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">What causes a low-resolution file to be an image downloaded from Facebook?</h3>
-<p class=text-gray-600>  A large number of times Facebook has imposed restrictions on how high of a resolution they will allow. As such, the tool can only access the original file's actual maximum resolution (no matter how many times the user may have attempted to "up-res" or enhance it).</p>
+<p class=text-gray-300>  A large number of times Facebook has imposed restrictions on how high of a resolution they will allow. As such, the tool can only access the original file's actual maximum resolution (no matter how many times the user may have attempted to "up-res" or enhance it).</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Why is it that sometimes the tool fails to function?</h3>
-<p class=text-gray-600>Facebook continuously makes changes to its platform so as to stop data scraping or other automated software solutions. Within a short period of time, this will cause your downloader tool to become inoperable. A quality downloader tool should update regularly, but occasional downtimes are common as well.</p>
+<p class=text-gray-300>Facebook continuously makes changes to its platform so as to stop data scraping or other automated software solutions. Within a short period of time, this will cause your downloader tool to become inoperable. A quality downloader tool should update regularly, but occasional downtimes are common as well.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Can I download older profile pictures that are no longer the main DP?</h3>
-<p class=text-gray-600>Right now, only the latest profile photo can be downloaded using this tool. Getting older ones means pulling from the Profile Pictures section - doable, yet needs its own setup. A different approach entirely. Might show up later down the line.</p>
+<p class=text-gray-300>Right now, only the latest profile photo can be downloaded using this tool. Getting older ones means pulling from the Profile Pictures section - doable, yet needs its own setup. A different approach entirely. Might show up later down the line.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Do you store the images I download? </h3>
-<p class=text-gray-600>Nothing sticks around. Every image stays right inside your browser - never touches our systems. When you grab a picture, it skips the middleman entirely. What happens on your device stays there. Protection isn’t layered on; it’s built into how things work.</p>
+<p class=text-gray-300>Nothing sticks around. Every image stays right inside your browser - never touches our systems. When you grab a picture, it skips the middleman entirely. What happens on your device stays there. Protection isn’t layered on; it’s built into how things work.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Why does it stop working after multiple tries?</h3>
-<p class=text-gray-600> If too many requests come from one IP address in a very short period of time, your server or Facebook will likely temporarily prevent the processing of any more requests from that IP address.</p>
+<p class=text-gray-300> If too many requests come from one IP address in a very short period of time, your server or Facebook will likely temporarily prevent the processing of any more requests from that IP address.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-800">
 <h3 class="font-bold text-lg mb-2">Can I view someone’s locked Facebook DP?</h3>
-<p class=text-gray-600>No, there is no way to view a restricted Facebook profile picture. If Facebook has restricted your access to their full-size image via their privacy settings, then the only way you will be able to see it is through the version that Facebook has made public. There are no legitimate tools to open a locked profile, and if there are websites claiming to allow you to do so, they are most likely false photoshopping websites or untrustworthy.</p>
+<p class=text-gray-300>No, there is no way to view a restricted Facebook profile picture. If Facebook has restricted your access to their full-size image via their privacy settings, then the only way you will be able to see it is through the version that Facebook has made public. There are no legitimate tools to open a locked profile, and if there are websites claiming to allow you to do so, they are most likely false photoshopping websites or untrustworthy.</p>
 
 
 </div>
 </div></section>
-<footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+<footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 <div class=col-span-1>
 <a href=/ class="flex items-center space-x-2 mb-6 group">
-<div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
-<img src=https://fbviddl.com/FBDL.png alt="FBviddl Logo" class="w-6 h-6 object-contain">
-</div>
-<span class="text-xl font-bold text-gray-900 tracking-tight">FB<span class=text-blue-600>viddl.com</span></span>
+<span class="text-xl font-bold text-white tracking-tight">FBvid<span class=text-blue-400>dl.com</span></span>
 </a>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
 The fastest and most reliable way to download Facebook videos, reels, and profile pictures in HD quality. Free, secure, and easy to use.
 </p>
-<div class="pt-6 border-t border-gray-100">
-<h4 class="text-xs font-bold text-gray-900 mb-4">DISCLAIMER</h4>
+<div class="pt-6 border-t border-gray-800">
+<h4 class="text-xs font-bold text-white mb-4">DISCLAIMER</h4>
 <p class="text-gray-400 text-xs leading-relaxed italic">
 FBviddl is not affiliated with Meta or Facebook. We do not host any content on our servers.
 </p>
 </div>
 </div>
 <div>
-<h4 class="text-sm font-bold text-gray-900 mb-6">PRODUCT</h4>
+<h4 class="text-sm font-bold text-white mb-6">PRODUCT</h4>
 <ul class=space-y-6>
 
-<li><a href=/facebook-reel-download class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Reels Downloader</a></li>
-<li><a href=/facebok-dp-downloader class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>DP Downloader</a></li>
-<li><a href=/about class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>About Us</a></li>
+<li><a href=/facebook-reel-download class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Reels Downloader</a></li>
+<li><a href=/facebok-dp-downloader class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>DP Downloader</a></li>
+<li><a href=/about class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>About Us</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-sm font-bold text-gray-900 mb-6">LEGAL & CONTACT</h4>
+<h4 class="text-sm font-bold text-white mb-6">LEGAL & CONTACT</h4>
 <ul class=space-y-6>
-<li><a href=/privacy class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
-<li><a href=/terms class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
-<li><a href=/contact class="text-gray-600 hover:text-blue-600 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
+<li><a href=/privacy class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
+<li><a href=/terms class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
+<li><a href=/contact class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
 </ul>
 </div>
 </div>
-<div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-500 text-sm">© 2026 FBviddl. All rights reserved.</p>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2026 FBviddl. All rights reserved.</p>
 </div>
 </div>
 </footer>
