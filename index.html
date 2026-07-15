@@ -1,334 +1,458 @@
 <!doctype html>
-<html lang=en>
+<html lang="en">
 <head>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Facebook Downloader – Download Videos, Reels, Images & Profile Pictures</title>
-<meta name=description content="Download Facebook videos, reels, images, and profile pictures in high quality. Paste a link and save the file directly to your device in seconds.">
-<meta name=keywords content="facebook downloader, facebook video downloader, download facebook videos, facebook reels downloader, facebook image downloader, facebook dp downloader, download facebook profile picture, save facebook reels, fb video download, download facebook video hd, facebook video download online, save facebook video to phone, facebook reel download hd, fb dp full size download">
-<meta name=author content=FBviddl>
-<meta name=robots content="index, follow">
-<meta name=theme-color content=#2563eb>
-<meta property=og:type content=website>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Facebook Video Downloader - Download FB Videos online </title>
+<meta name="description" content="Download Facebook videos and reels in HD or SD for free. No login, no app, no watermark - just paste the link and save instantly with FBviddl.">
+<meta name="author" content="FBviddl">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://fbviddl.com/">
-<meta property=og:title content="Facebook Downloader – Download Videos, Reels, Images & Profile Pictures">
-<meta property=og:description content="Download Facebook videos, reels, images, and profile pictures in high quality. Paste a link and save the file directly to your device in seconds.">
-<meta property=og:image content="https://fbviddl.com/og-image.jpg">
-<meta property=twitter:card content=summary_large_image>
+<meta property="og:title" content="Facebook Video Downloader - Download FB Videos online ">
+<meta property="og:description" content="Download Facebook videos and reels in HD or SD for free. No login, no app, no watermark - just paste the link and save instantly.">
+<meta property="og:image" content="https://fbviddl.com/og-image.jpg">
+<meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://fbviddl.com/">
-<meta property=twitter:title content="Facebook Downloader – Download Videos, Reels, Images & Profile Pictures">
-<meta property=twitter:description content="Download Facebook videos, reels, images, and profile pictures in high quality. Paste a link and save the file directly to your device in seconds.">
-<meta property=twitter:image content="https://fbviddl.com/og-image.jpg">
+<meta property="twitter:title" content="Facebook Video Downloader - Download FB Videos online ">
+<meta property="twitter:description" content="Download Facebook videos and reels in HD or SD for free. No login, no app, no watermark - just paste the link and save instantly.">
+<meta property="twitter:image" content="https://fbviddl.com/og-image.jpg">
 <link rel="canonical" href="https://fbviddl.com/">
-<link rel=icon type=image/x-icon href=/favicon.ico>
-<link rel="stylesheet" href="/romitstylemin.css/romitfv.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- Fonts: preconnect + swap so text renders immediately with a fallback, no blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<style>body{font-family:Inter,sans-serif}#mobileMenu,nav{backdrop-filter:none!important;background-color:#000!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Facebook Video Downloader",
+  "url": "https://fbviddl.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://fbviddl.com/?url={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Download Facebook Videos",
+  "step": [
+    { "@type": "HowToStep", "name": "Copy the video link", "text": "Open Facebook, find the video or reel you want to save, tap Share, then choose Copy Link." },
+    { "@type": "HowToStep", "name": "Paste it into FBviddl", "text": "Paste the link into the Facebook video downloader box at the top of the page." },
+    { "@type": "HowToStep", "name": "Click Download", "text": "Hit the Download button. FBviddl fetches the video and shows a preview within a couple of seconds." },
+    { "@type": "HowToStep", "name": "Pick a quality & save", "text": "Choose HD or SD and the video saves straight to your device, with no login, app, or watermark." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Facebook video downloader free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can download Facebook videos for free without login." }
+    },
+    {
+      "@type": "Question",
+      "name": "How to download Facebook videos in HD?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Simply paste the Facebook video link into the FBviddl input field and click the download button. You can then choose to download in HD quality." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I save a Facebook video for offline viewing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can download a video from Facebook and save it locally on your device to view at a later date without needing an internet connection or having to find the original post again." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do people download Facebook videos instead of using Facebook's Save feature?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The Save feature stores an item inside Facebook, while downloading keeps the video on your own device so you can access it anytime without relying on the platform." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't I find a Facebook video I watched recently?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The video usually still exists but has been pushed further down your feed by newer activity and posts, rather than being removed." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the reason behind content creators saving their own Facebook videos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Many creators save copies of their uploads to back them up, manage their content, edit it for future production, or share it on other platforms." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Facebook videos useful for research and reference?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, Facebook hosts many information-rich videos like interviews, discussions, and presentations that people download to learn from or refer back to later." }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of videos are commonly downloaded from Facebook?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Commonly downloaded videos include tutorials, educational content, interviews, event recordings, public page posts, travel videos, and sports highlights." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it legal to download Facebook videos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Downloading a public Facebook video for personal, offline use is generally fine. Re-uploading, redistributing, or using someone else's video commercially without permission may breach copyright." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to install an app or browser extension?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No, FBviddl is fully web-based and runs directly in your browser on mobile and desktop, including iPhone, Android, Windows, and Mac." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FBviddl add a watermark to downloaded videos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No, videos are downloaded in their original quality with no watermark or branding added, in standard MP4 format." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I download Facebook Reels as well as regular videos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, FBviddl works with standard Facebook video links, shared videos, and Reels using the same paste-and-download process." }
+    }
+  ]
+}
+</script>
+
 </head>
-<body class="bg-black text-white">
-<script type=application/ld+json>
-{
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "FBviddl Facebook Downloader",
-      "operatingSystem": "Windows, macOS, Android, iOS",
-      "applicationCategory": "UtilitiesApplication",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "16487"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-</script>
-<script type=application/ld+json>
-{
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "FBviddl",
-      "url": "https://fbviddl.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://fbviddl.com/?url={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-</script>
-<script type=application/ld+json>
-{
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Is Facebook downloader free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you can download Facebook videos for free without login."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How to download Facebook videos in HD?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Simply paste the Facebook video link into the FBviddl input field and click the download button. You can then choose to download in HD quality."
-        }
-      }]
-    }
-</script>
-<nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-16 items-center">
-<a href=/ class="flex items-center space-x-2 group">
-<span class="text-xl font-bold text-white tracking-tight">FBvid<span class=text-blue-500>dl.com</span></span>
-</a>
-<div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
-<a href=/ class="text-blue-500 font-bold">Home</a>
-<a href=/facebook-video-downloader class="hover:text-blue-500 transition-colors">Video Download</a>
-<a href=/facebook-reel-download class="hover:text-blue-500 transition-colors">Reel Download</a>
-<a href=/facebook-image-downloader class="hover:text-blue-500 transition-colors">Image Download</a>
-<a href=/facebook-dp-downloader class="hover:text-blue-500 transition-colors">DP Downloader</a>
-<a href=https://threadsgrab.com/ class="hover:text-blue-500 transition-colors">threads Downloader</a>
-<a href=/about class="hover:text-blue-500 transition-colors">About</a>
-<a href=/contact class="hover:text-blue-500 transition-colors">Contact</a>
-<a href=/blog class="hover:text-blue-500 transition-colors">Blog</a>
-</div>
-<button id=mobileMenuBtn class="md:hidden p-2 text-gray-300 hover:text-blue-500 transition-colors">
-<svg id=menuIcon class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
-<path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M4 6h16M4 12h16M4 18h16"></path>
-</svg>
-<svg id=closeIcon class="w-6 h-6 hidden" fill=none stroke=currentColor viewBox="0 0 24 24">
-<path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
-</svg>
-</button>
-</div>
-</div>
-<div id=mobileMenu class="hidden md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-gray-900 z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
-<div class="flex flex-col h-full">
-<div class="h-16 flex items-center justify-between px-6 border-b border-gray-800">
-<a href=# class="flex items-center space-x-2">
-<span class="text-base font-bold text-white tracking-tight">FBvid<span class=text-blue-500>dl.com</span></span>
-</a>
-<button id=closeMenuBtn class="p-2 text-gray-300 hover:text-blue-500 transition-colors">
-<svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
-<path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
-</svg>
-</button>
-</div>
-<div class="flex-grow overflow-y-auto">
-<nav class="flex flex-col">
-<a href=/ class="flex items-center px-6 py-4 text-blue-500 font-bold bg-gray-800 border-b border-gray-700 transition-all">
-Home
-</a>
-<a href=/facebook-video-downloader class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-Video Downloader
-</a>
-<a href=/facebook-reel-download class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-Facebook Reel Download
-</a>
-<a href=/facebook-image-downloader class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-Facebook Image Downloader
-</a>
-<a href=/facebook-dp-downloader class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-Facebook DP Downloader
-</a>
+<body>
 
-<a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-Threads Downloader
-</a>
-<a href=/about class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-About
-</a>
-<a href=/contact class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-Contact
-</a>
-<a href=/blog class="flex items-center px-6 py-4 text-white font-medium hover:bg-gray-800 hover:text-blue-500 border-b border-gray-700 transition-all">
-Blog
-</a>
-</nav>
-</div>
-</div>
-</div>
-</nav>
-<section id=downloader class="py-16 px-4">
-<div class="max-w-3xl mx-auto text-center">
-<h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Facebook video Download</h1>
-<div class="bg-gray-900 p-6 md:p-8 rounded-3xl shadow-xl border border-gray-800 mb-12">
-<form id=downloadForm method=POST class="flex flex-col md:flex-row gap-4">
-<div class="relative flex-grow">
-<input id=videoUrl placeholder="Paste Facebook video link here..." class="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-2xl focus:ring-4 focus:ring-blue-500/30 focus:border-blue-500 outline-none transition-all text-white placeholder-gray-500" required>
-</div>
-<button type=submit id=submitBtn class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition-all flex items-center justify-center space-x-2 shadow-lg shadow-blue-200">
-<span id=btnText>Download</span>
-<div id=btnLoader class="hidden animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
-</button>
-</form>
-<div id=errorMessage class="hidden mt-6 p-4 bg-red-900/30 text-red-400 rounded-xl flex items-center space-x-3 text-sm font-medium border border-red-800 text-left">
-<svg class="w-5 h-5 flex-shrink-0" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-<span id=errorText></span>
-</div>
-<div id=resultSection class="hidden mt-8 pt-8 border-t border-gray-700">
-<div class="mb-8 overflow-hidden rounded-2xl border border-gray-700 shadow-lg bg-black aspect-video flex items-center justify-center relative">
-<video id=videoPreview controls class="w-full h-full max-h-[400px] object-contain">
-<source id=videoSource src="" type=video/mp4>
-Your browser does not support the video tag.
-</video>
-</div>
-<div class="flex items-center justify-center space-x-2 text-green-400 mb-6">
-<svg class="w-5 h-5" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-<span class=font-bold>Video Found! Choose Quality:</span>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<a id=hdDownload href=# download=facebook-video-hd.mp4 class="hidden flex items-center justify-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition-all shadow-md">
-<svg class="w-5 h-5" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-<span>Download HD (High Quality)</span>
-</a>
-<a id=sdDownload href=# download=facebook-video-sd.mp4 class="hidden flex items-center justify-center space-x-3 bg-gray-800 hover:bg-gray-900 text-white py-4 rounded-2xl font-bold transition-all shadow-md">
-<svg class="w-5 h-5" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-<span>Download SD (Normal Quality)</span>
-</a>
-</div>
-<p class="mt-4 text-xs text-gray-400">Tip: If the download doesn't start, right-click the button and select "Save link as..."</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="px-4 pb-16">
-  <div class="max-w-5xl mx-auto">
-<div class="info-box">
-
-  <h2>
-   Facebook Downloader for Videos, Photos, Reels, and Profile Pictures
-  </h2>
-
-  <p>
-    Facebook is still one of the biggest platforms used to share visual content (public videos/viral Reels, photo posts/profile pictures), with millions of pieces ('content') uploaded to the platform daily. Although it's simple for users to view and engage with the content posted on Facebook, saving it for offline viewing is not as easy as you might expect.
-  </p>
-
-  <p>
-    This is where a Facebook Video Downloader comes in handy.
-  </p>
-
-  <p>
-    Rather than limiting you to downloading one kind of content, our Facebook Video Downloader allows users to download any type of public content available on Facebook (videos, images, Reels, profile pictures, etc.). Whether you're interested in saving a tutorial for future viewing, getting a backup copy of an important photo, or downloading a Reel before it disappears from your feed, downloading public Facebook Videos takes less than 10 seconds.
-  </p>
-
-</div>
-
-<div class="info-box">
-<h2>Single Tool For All Facebook Media Formats</h2>
-<p>Most downloaders will only allow you to download video files as opposed to all other forms of media that are on the Facebook platform such as images of products, pictures of events, company graphics, community announcements, and educational content from users' Personal/Timeline profiles, which usually contain way too many to be saved for future reference.</p>
-<p>This often ends up being annoying having multiple downloaders for separate forms of content with no way to keep all of your downloaded Facebook media in one location.</p>
-<p>A Single Facebook Media Downloader allows you to manage and access every form of content that is published on Facebook in just one platform rather than trying to manage everything through multiple online sources.</p>
-</div>
-<div class="info-box">
-<h2>Save Facebook Videos Without Losing Quality</h2>
-<p>Facebook allows users to post everything ranging from short clips to long-form educational videos, so downloading Facebook videos is useful for those who want to watch content without an internet connection or save copy of their own uploads for backup reasons.</p>
-<p>Having access to download options allows users to download & save video files that are publicly available from Facebook.com and watch it later without requiring broadband or data connection.</p>
-<p>When using the <a href="https://fbviddl.com/facebook-video-downloader" class="text-blue-400 hover:underline">Facebook Video Downloader</a>, video quality is significant, particularly when viewing content on larger televisions or monitors; thus preserving the best available video quality must be one of the primary goals of the downloading process</p>
-</div>
-<div class="info-box">
-<h2>Download Facebook Reels Before They Disappear from Your Newsfeed</h2>
-<p>The number of people watching this type of short form video increased rapidly as it is a new trend on Facebook. These short videos are sometimes so easy to watch, but because they are so short, it is very easy for them to get lost in your feed.</p>
-<p>A recipe you liked, some great advice for traveling, or some instructions on how to do a cool video edit may fall out of your view because of the continual new content being posted every day.</p>
-<p>By <a href="https://fbviddl.com/facebook-video-downloader" class="text-blue-400 hover:underline">downloading facebook Reels</a>, you make sure that you keep access to whatever you downloaded. You'll never again have to go back through your activity history to look for something you wanted to see again...just download it to your phone and watch it anything.</p>
-
-</div>
-<div class="info-box">
-<h2>Facebook Image Downloader for High-Resolution Photos</h2>
-<p>Facebook is one of the largest sources for shared photo content; from professional photographers and events’ albums to infographics and products, you can find countless photos being shared on Facebook.</p>
-<p>Without a dedicated<a href="https://fbviddl.com/facebook-image-downloader" class="text-blue-400 hover:underline"> Facebook photo downloader</a>, there is often a loss of clarity and there will be missed visual details that would have been better preserved when using a screenshot.</p>
-<p>By using a dedicated Fb photo downloader for one image or multiple images from the same post, you will have a much easier time getting high-quality images through direct downloads than if you rely on your temporary browser cache, or if you use screenshots.</p>
-</div>
-<div class="info-box">
-<h2>Facebook Profile Picture Downloader for Full-Size Profile Photos</h2>
-<p>People often use their profile pictures as their first visual association with your Facebook account, whether they’re on a website or in real life. In a business setting, your profile photo can help establish an initial connection to your target audience and create brand recognition, especially amongst potential customers who may never see your products or services one-on-one.</p>
-<p>When viewing a person’s Facebook profile (their DP), you generally see the tiny image that appears on their profile along with a thumbnail-sized version in the news feed. If you want to see a higher-resolution version that’s not being compressed down to the tiny amount of data that Facebook uses, you must either zoom into a tiny thumbnail posted on the social network or take a screen shot of it (which can be low-quality).</p>
-<p>The <a href="https://fbviddl.com/facebook-profile-picture-downloader" class="text-blue-400 hover:underline">Facebook Profile Picture Downloader</a> is great for those who want to save high-quality versions of public DPs (without having to pay for them). The service enables you to access these high-resolution versions easily and quickly.</p>
-
-</div>
+<nav class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo">FBviddl<span class="accent">.com</span></a>
+    <div class="nav-links">
+      <a href="/" class="active">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
   </div>
+</nav>
 
+<div id="scrim" class="scrim"></div>
+<div id="mobileMenu" class="mobile-menu">
+  <div class="mobile-menu-head">
+    <a href="/" class="logo" style="font-size:1rem">FBviddl<span class="accent">.com</span></a>
+    <button id="closeMenuBtn" class="menu-btn" aria-label="Close menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="/" class="active">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</div>
 
-<div class="max-w-5xl mx-auto">
- <h2 class="text-3xl font-bold text-white mb-8 text-center">
-        FAQ - Frequently Asked Questions
-    </h2>
-<div class="info-box">
-<h3>Why isn't my Facebook download link working?</h3>
-<p>In general, there are a couple reasons you may be receiving an error when trying to download your Facebook post. Your post might be marked as “private” or “restricted” and you may not have copied the URL from your browser correctly. Make sure you have your correct public Facebook URL and try again.</p>
+<div id="scrollNotification" class="scroll-fab hidden">
+  <button id="scrollToUpdates" class="scroll-fab-btn" aria-label="Jump to updates" title="Jump to updates">
+    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+  </button>
+  <button id="scrollToTop" class="scroll-fab-btn primary" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+  </button>
 </div>
-<div class="info-box"> 
-<h3>Can I download Facebook Reels as well as regular videos?</h3>
-<p>Yes. The downloader can download Facebook Reels in addition to other video posts, which makes saving short length content on your device easier than before!</p>
-</div>
-<div class="info-box">
-  <h3>Why do some Facebook videos have multiple download quality options?</h3>
-  <p>Videos on Facebook can be saved at different quality levels depending on how they were previously recorded by the original producer and uploaded to Facebook. Based on what is available to download, the downloader often offers multiple quality options to help users choose which will work best for them.</p>
-</div>
-<div class="info-box">
-  <h3>Is it legal to download Facebook videos and photos?</h3>
-  <p>Downloading content from Facebook is generally legal if you have the right to access and save that content. However, it is important to respect copyright laws and the terms of service of Facebook. Always ensure that you have permission from the content creator before downloading and using their media.</p>
-</div>
-<div class="info-box">
-  <h3>Why do people use a Facebook Downloader instead of Facebook's Save feature?</h3>
-  <p>Facebook's Saves feature is a way for an individual to save content on their Facebook account, but in turn, they would still have to log back into their Facebook account and connect to the internet in order to retrieve, view, and use the information they had saved via the Save feature. A Facebook Downloader on the other hand allows an individual to download videos, photos, reels, and other types of video and media and have those files saved directly onto their personal device. This means that the person can view that media offline, store a personal backup, and access any of that media at a later point in time regardless of whether or not the media is deleted, removed, and/or isn't easily retrievable within Facebook.</p>
-</div>
-<div class="info-box">
-  <h3>What kinds of content can you download from Facebook?</h3>
-  <p>Facebook Downloaders are tools to enable you to download any publicly available content on Facebook (videos, reels, pictures/photos) and your user's profile picture (thumbnail) for your use (e.g., downloading a viral reel, a high-quality picture, a video tutorial, or reference of a user's profile picture). This tool allows you to download multiple formats of Facebook media from one source.</p>
-</div>
+
+<section class="hero" id="downloader">
+  <div class="hero-inner">
+    <h1>Facebook Video Downloader</h1>
+    <p class="hero-sub">Paste any public Facebook video or reel link below and grab it in HD or SD in seconds.</p>
+
+    <div class="card">
+      <form id="downloadForm" class="download-form">
+        <div class="input-wrap">
+          <input id="videoUrl" placeholder="Paste Facebook video link here..." required autocomplete="off">
+        </div>
+        <button type="submit" id="submitBtn" class="btn-primary">
+          <span id="btnText">Download</span>
+          <div id="btnLoader" class="spinner hidden"></div>
+        </button>
+      </form>
+
+      <div id="errorMessage" class="error-box hidden">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span id="errorText"></span>
+      </div>
+
+      <div id="resultSection" class="result hidden">
+        <div class="video-frame">
+          <video id="videoPreview" controls>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="found-line">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Video found! Choose quality:
+        </div>
+        <div class="quality-grid">
+          <a id="hdDownload" href="#" download="facebook-video-hd.mp4" class="q-btn q-hd hidden">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            Download HD (High Quality)
+          </a>
+          <a id="sdDownload" href="#" download="facebook-video-sd.mp4" class="q-btn q-sd hidden">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            Download SD (Normal Quality)
+          </a>
+        </div>
+        <p class="tip">Tip: if the download doesn't start, right-click the button and select "Save link as..."</p>
+      </div>
+    </div>
+      <p class="tip">Note: fbviddl.com is not affiliated with Facebook or Meta.</p>
+  </div>
 </section>
 
+<section>
+  <div class="wrap-narrow">
+    <div class="updates-card">
+      <div class="updates-head">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+        <span style="flex:1">Updates</span>
+        <button id="scrollToUpdatesTop" class="updates-top-btn" aria-label="Back to top" title="Back to top">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+        </button>
+      </div>
+      <div class="updates-body">
+        <div class="update-item u4"><b>&#127877; UPDATE (7 July 2026)</b>We gave FbVidDl a fresh new look and rebranded the website to create a cleaner design and a better experience for our users.</div>
+        <div class="update-item u5"><b>&#128226; UPDATE (13 June 2026)</b>Our team upgraded the API behind FbVidDl, making video processing faster and improving overall performance.</div>
+        <div class="update-item u6"><b>&#128226; UPDATE (29 May 2026)</b>We fixed several issues and made important improvements to provide a smoother and more reliable downloading experience.</div>
+        <div class="update-item u7"><b>&#128226; UPDATE (3 May 2026)</b>We released our Facebook Downloader service, helping users save public Facebook videos online in just a few clicks.</div>
+        <div class="update-item u8"><b>&#128226; UPDATE (27 April 2026)</b>FbVidDl.com officially went live worldwide. We launched with a simple goal: to make downloading Facebook videos easy and accessible for everyone. &#128640;</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-<div class=col-span-1>
-<a href=/ class="flex items-center space-x-2 mb-6 group">
-<span class="text-xl font-bold text-white tracking-tight">FBvid<span class=text-blue-400>dl.com</span></span>
-</a>
-<p class="text-gray-400 text-sm leading-relaxed mb-6">
-The fastest and most reliable way to download Facebook videos and reels in HD quality. Free, secure, and easy to use.
-</p>
-<div class="pt-6 border-t border-gray-800">
-<h4 class="text-xs font-bold text-white mb-4">DISCLAIMER</h4>
-<p class="text-gray-400 text-xs leading-relaxed italic">
-FBviddl is not affiliated with Meta or Facebook. We do not host any videos on our servers.
-</p>
+<section>
+  <div class="wrap-narrow">
+    <h2 class="section-title reveal">How to Download Facebook Videos</h2>
+    <p class="section-sub reveal">Save any public Facebook video or reel in four simple steps</p>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <span class="step-num">1</span>
+        <h3>Copy the video link</h3>
+        <p>Open Facebook to find the video or reel you want to save, tap <strong>Share</strong>, then choose <strong>Copy Link</strong>.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">2</span>
+        <h3>Paste it into FBviddl</h3>
+        <p>Come back to this page and paste the link into the <strong>Facebook video downloader</strong> box at the top.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">3</span>
+        <h3>Click Download</h3>
+        <p>Hit the <strong>Download</strong> button. FBviddl fetches the video and shows a preview, usually within a couple of seconds.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">4</span>
+        <h3>Pick a quality &amp; save</h3>
+        <p>Choose <strong>HD</strong> or <strong>SD</strong> and the video saves straight to your device. </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-narrow">
+    <h2 class="section-title reveal">Everything you need to know</h2>
+    <p class="section-sub reveal">A quick guide to downloading and saving Facebook videos</p>
+    <div class="info-grid">
+      <div class="info-box reveal">
+        <h2>Download Facebook Videos Online for free</h2>
+        <p>Our fbviddl offers to download MP4 videos from Facebook online. This tool is web-built, so you do not need to download any app. It runs in your browser without any issues and supports every mobile and desktop device. You can download your FB video and save it on your device easily.</p>
+      </div>
+      <div class="info-box reveal">
+        <h2>Why Choose FbVidDl to Download Facebook Videos?</h2>
+        <p>Our Facebook downloader is completely free to use, and we do not store any user data. FbVidDl is secure and never asks for your personal details. You can download Facebook videos anonymously without informing the video owner. The tool is fast, safe, and easy to use.</p>
+      </div>
+      <div class="info-box reveal">
+        <h2>What Makes Us the Best Facebook Video Downloader?</h2>
+        <p>Because we offer the best quality Facebook videos for download. FbVidDl provides both SD and HD quality options, allowing you to choose the quality that best suits your needs. Our tool works on all devices, supports quick video processing, and lets you download public Facebook videos without any complicated steps. We focus on providing a simple, reliable, and smooth downloading experience for every user.</p>
+        </div>
+      <div class="info-box reveal">
+        <h2>Watch Facebook Videos Anytime, Even Offline</h2>
+        <p>The ability to download Facebook videos allows you to view your preferred videos at any time. People often download tutorials, recipes, motivational videos, and nostalgia videos to revisit them later when they do not wish to search for them again.
+
+Having a video saved offline comes in handy while on-the-go, facing slow internet speeds, or trying to conserve mobile data. With FbVidDl, you can download any public Facebook video to your device.</p>
 </div>
-</div>
-<div>
-<h4 class="text-sm font-bold text-white mb-6">PRODUCT</h4>
-<ul class=space-y-6>
-<li><a href=/facebook-reel-download class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>Reels Downloader</a></li>
-<li><a href=/facebok-dp-downloader class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>DP Downloader</a></li>
-<li><a href=/about class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>About Us</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-sm font-bold text-white mb-6">LEGAL & CONTACT</h4>
-<ul class=space-y-6>
-<li><a href=/privacy class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
-<li><a href=/terms class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
-<li><a href=/contact class="text-gray-300 hover:text-blue-400 text-sm transition-colors flex items-center"><svg class="w-5 h-5 mr-2" width=20 height=20 fill=none stroke=currentColor viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-400 text-sm">© 2026 FBviddl. All rights reserved.</p>
-<div class="flex items-center space-x-2">
-</div>
-</div>
-</div>
+      
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-narrow">
+    <h2 class="section-title reveal">Frequently Asked Questions</h2>
+    <p class="section-sub reveal">Everything you might want to know before you download</p>
+    <div id="faqList">
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I save a Facebook video for offline viewing?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>Yes, you can download a video from Facebook and save it locally on your device to view at a later date without needing the internet connection or having to go back and find the original post on Facebook again.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Why do people download Facebook videos instead of using Facebook's Save feature?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>The Save feature allows you to store an item in Facebook but downloading allows you to keep the video on your device. Having direct access to videos without relying on Facebook (where they are hosted) gives the user access to view that content whenever they want, without having to find that video again within the Facebook website.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Why can't I find a Facebook video I watched recently?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>If you're unable to locate a video from your Facebook feed, the video could potentially still exist but be pushed further down the list of possible recommendations. The content doesn't show up in your feed simply because it's gone further down the timeline due to recent activity or other posts added after the video you viewed.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What is the reason behind content creators saving their own Facebook videos?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>Many creators will save copies of their uploads to back them up, manage their content, for future production editing or to share them on other platforms.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Are Facebook videos useful for research and reference?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>Facebook is a provider of many types of information-related video content like interviews, discussions and presentations. Some users download videos so that they can use them in the future to learn from or refer back to.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What types of videos are commonly downloaded from Facebook?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>Commonly downloaded videos from Facebook are usually tutorials, educational videos, interviews with notable people, event recordings, videos posted to public pages by users, travel videos and sports highlights. Users typically download videos they would like to refer back to at a later time.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Is it legal to download Facebook videos?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>Downloading a public Facebook video for personal, offline use is generally fine. Re-uploading, redistributing, or using someone else's video commercially without permission may breach copyright, so always check the original creator's rights before sharing downloaded content elsewhere.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do I need to install an app or browser extension?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>No. FBviddl is a fully web-based Facebook video downloader, so there's nothing to install. It runs directly in your browser on both mobile and desktop, including iPhone, Android, Windows, and Mac.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Does FBviddl add a watermark to downloaded videos?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>No. Videos are downloaded in their original quality with no watermark or branding added, in standard MP4 format that plays on virtually any device or media player.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I download Facebook Reels as well as regular videos?
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+        <div class="faq-a"><p>Yes. FBviddl works with standard Facebook video links, shared videos, and Reels. Just paste the link the same way and choose your preferred quality once it's found.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">FBvid<span class="accent">dl.com</span></a>
+        <p class="footer-desc">The fastest and most reliable way to download Facebook videos and reels in HD quality. Free, secure, and easy to use.</p>
+        <div class="disclaimer">
+          <h4>DISCLAIMER</h4>
+          <p>FBviddl is not affiliated with Meta or Facebook. We do not host any videos on our servers.</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-head">Other Tools</h4>
+        <ul class="footer-links">
+          <li><a href="https://threadsgrab.com/">Threads Video Downloader</a></li>
+          <li><a href="https://instadpdownload.com/">Instagram DP Downloader</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-head">LEGAL &amp; CONTACT</h4>
+        <ul class="footer-links">
+          <li><a href="/privacy"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Privacy Policy</a></li>
+          <li><a href="/terms"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Terms of Service</a></li>
+          <li><a href="/contact"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 FBviddl. All rights reserved.</div>
+  </div>
 </footer>
-<script src=/romitscript.min/romitfbv.min.js></script>
-<script src=/romitscript.min/menu.js></script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- Mobile menu ---- */
+  var menuBtn = document.getElementById('menuBtn'),
+      closeBtn = document.getElementById('closeMenuBtn'),
+      menu = document.getElementById('mobileMenu'),
+      scrim = document.getElementById('scrim');
+
+  function openMenu(){ menu.classList.add('open'); scrim.classList.add('show'); document.body.style.overflow='hidden'; }
+  function closeMenu(){ menu.classList.remove('open'); scrim.classList.remove('show'); document.body.style.overflow=''; }
+
+  menuBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  scrim.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* ---- FAQ accordion ---- */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---- Scroll reveal ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Note: the download form (#downloadForm, #videoUrl, #submitBtn, #btnText,
+     #btnLoader, #errorMessage, #errorText, #resultSection, #videoPreview,
+     #videoSource, #hdDownload, #sdDownload) is wired up by your existing
+     /romitscript.min/romitfbv.min.js — untouched below — so the actual
+     Facebook video fetching keeps working exactly as before. */
+})();
+</script>
+
+<script src="/romitscript.min/romitfbv.min.js"></script>
 </body>
 </html>
