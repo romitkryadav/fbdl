@@ -96,9 +96,9 @@
           <textarea id="message" name="message" rows="5" required placeholder="Write your message here..." style="width: 100%; padding: 16px 18px; background: var(--surface-2); border: 1.5px solid var(--border); border-radius: 14px; font-size: 0.95rem; color: var(--text); outline: none; transition: border-color 0.2s, box-shadow 0.2s; resize: vertical; min-height: 120px; font-family: inherit;"></textarea>
         </div>
         
-        <button type="submit" id="sendBtn" class="btn-primary" style="width: 100%;">
+        <button type="submit" id="sendBtn" class="btn-primary" style="width: 100%;" aria-live="polite">
           <span id="btnText">Send Message</span>
-          <div id="btnLoader" class="spinner" style="margin-left: 10px;"></div>
+          <span id="btnLoader" class="spinner hidden" aria-hidden="true"></span>
         </button>
       </form>
       
@@ -170,21 +170,43 @@
   var sendBtn = document.getElementById('sendBtn');
   var btnText = document.getElementById('btnText');
   var btnLoader = document.getElementById('btnLoader');
+  var endpoint = 'https://formsubmit.co/ajax/contact.themistero@gmail.com';
 
   function setLoading(state) {
     if (state) {
       sendBtn.disabled = true;
-      btnText.style.display = 'none';
+      sendBtn.setAttribute('aria-busy', 'true');
+      btnText.textContent = 'Sending...';
       btnLoader.classList.remove('hidden');
     } else {
       sendBtn.disabled = false;
-      btnText.style.display = 'inline';
+      sendBtn.setAttribute('aria-busy', 'false');
+      btnText.textContent = 'Send Message';
       btnLoader.classList.add('hidden');
     }
   }
 
   form.addEventListener('submit', function(e) {
+    e.preventDefault();
     setLoading(true);
+
+    var formData = new FormData(form);
+
+    fetch(endpoint, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      window.location.href = '/send';
+    })
+    .catch(function() {
+      setLoading(false);
+      alert('Sorry, we could not send your message right now. Please try again.');
+    });
   });
 })();
 </script>
