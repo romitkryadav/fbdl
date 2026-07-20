@@ -2,3 +2,7 @@
 #name,#email,#subject,#message,#fbUrlInput{padding:20px 24px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:14px;font-size:1rem;outline:0;transition:border-color .2s,box-shadow .2s}
 #name::placeholder,#email::placeholder,#subject::placeholder,#message::placeholder,#fbUrlInput::placeholder{color:#6b7280}
 #name:focus,#email:focus,#subject:focus,#message:focus,#fbUrlInput:focus{border-color:var(--blue-light);box-shadow:0 0 0 4px rgba(37,99,235,.18)}
+.btn-primary:disabled{opacity:.8;cursor:wait}
+.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:999px;animation:spin .9s linear infinite;margin-left:8px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hidden{display:none!important}
