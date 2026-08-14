@@ -867,12 +867,15 @@ button {
 
 /* Loading Animation State */
 .loading-box {
-  display: none;
   padding: 2.5rem 1rem;
   text-align: center;
 }
 
 .loading-box.active {
+  display: block;
+}
+
+.loading-box:not(.hidden) {
   display: block;
 }
 
@@ -904,7 +907,6 @@ button {
 
 /* Error Message Area */
 .error-box {
-  display: none;
   padding: 1.25rem;
   border-radius: var(--radius-md);
   background-color: var(--error-bg);
@@ -912,12 +914,17 @@ button {
   color: var(--error-text);
   margin-top: 1.5rem;
   text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
 }
 
 .error-box.active {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+}
+
+.error-box:not(.hidden) {
+  display: flex;
 }
 
 .error-icon {
@@ -2548,4 +2555,99 @@ button {
   .c-primary-email { font-size: 0.85rem; }
   .c-success-title { font-size: 0.88rem; }
   .c-success-sub   { font-size: 0.8rem; }
+}
+
+/* ============ Image Downloader Styles ============ */
+
+.image-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .image-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.image-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.image-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-input);
+}
+
+@media (max-width: 640px) {
+  .image-card img {
+    height: 200px;
+  }
+}
+
+.download-img-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.download-img-btn:hover {
+  filter: brightness(1.08);
+}
+
+.download-img-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============ DP Preview Styles ============ */
+
+.profile-preview-img {
+  width: 220px;
+  height: 220px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-card);
+  box-shadow: 0 0 0 2px var(--border-color), 0 20px 50px var(--shadow-color);
+  background: var(--bg-input);
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .profile-preview-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Input text color fix per project constraints */
+.url-input {
+  color: var(--text-primary);
 }

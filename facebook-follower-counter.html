@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live Follower Counter - Real-Time Growth Tracking</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Check live public follower counts instantly. Modern, transparent tool powered by Cloudflare Worker API without access tokens or fake estimates." />
+<meta name="keywords" content="live follower counter, threads follower counter, facebook follower counter, follower count live, real time follower checker" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1" />
+<meta name="author" content="Romit Kr Yadav" />
+<meta name="application-name" content="Fbviddl" />
+<meta name="theme-color" content="#4f46e5" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://fbviddl.com/facebook-follower-counter" />
+<meta property="og:title" content="Live Follower Counter - Real-Time Growth Tracking" />
+<meta property="og:description" content="Check live public follower counts instantly. Modern, transparent tool powered by Cloudflare Worker API without access tokens or fake estimates." />
+<meta property="og:site_name" content="Facebook Follower Counter" />
+<meta property="og:image" content="https://fbviddl.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://fbviddl.com/facebook-follower-counter" />
+<meta name="twitter:title" content="Live Follower Counter - Real-Time Growth Tracking" />
+<meta name="twitter:description" content="Check live public follower counts instantly. Modern, transparent tool powered by Cloudflare Worker API without access tokens or fake estimates." />
+<meta name="twitter:image" content="https://fbviddl.com/og-image.jpg" />
+<link rel="canonical" href="https://fbviddl.com/facebook-follower-counter" />
+<link rel="icon" type="image/png" href="https://fbviddl.com/favicon.png" />
+
+<!-- Google Fonts: Playfair Display for Serif headings, JetBrains Mono for counters, Plus Jakarta Sans for body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/romitkrfb.css">
+<link rel="stylesheet" href="/fbcount.css">
+</head>
+<body>
+<header class="header" id="siteHeader" role="banner">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="FBviddl - Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon">FBviddl</a>
+    <nav class="nav-desktop" role="navigation" aria-label="Primary Navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/blog" class="nav-link">Blog</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile Navigation" hidden>
+  <a href="/" class="nav-link">Home</a>
+  <a href="/blog" class="nav-link">Blog</a>
+  <a href="/about" class="nav-link">About</a>
+  <a href="/contact" class="nav-link">Contact</a>
+</nav>
+
+<main id="mainContent" role="main">
+  <section class="hero-section" id="downloader" aria-labelledby="heroHeading">
+    <div class="container">
+      <div class="hero-copy">
+        <h1 class="hero-title" id="heroHeading">Facebook Follower Counter</h1>
+        <p class="hero-subtitle hero-subtitle-sm">Real-time public follower count tracker. Live dashboard with trend chart and analytics, no login required.</p>
+      </div>
+
+      <div class="tool-tabs" id="toolTabs" role="tablist" aria-label="Downloader Tools">
+        <a href="/" class="tool-tab" id="toolVideoTab" role="tab" aria-selected="false" aria-label="Video Downloader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+        </a>
+        <a href="/" class="tool-tab" id="toolReelTab" role="tab" aria-selected="false" aria-label="Reel Downloader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
+        </a>
+        <a href="/facebook-image-downloader" class="tool-tab" id="toolImageTab" role="tab" aria-selected="false" aria-label="Image Downloader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        </a>
+        <a href="/facebook-dp-downloader" class="tool-tab" id="toolDpTab" role="tab" aria-selected="false" aria-label="Profile DP Downloader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="/facebook-follower-counter" class="tool-tab active" id="toolGrowthTab" role="tab" aria-selected="true" aria-label="Follower Counter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </a>
+      </div>
+
+      <!-- Background Grid Canvas -->
+      <div class="bg-grid"></div>
+
+      <div class="app-wrapper">
+
+        <!-- Search / Track Input Box Card -->
+        <section class="search-box-card">
+          <form id="counterForm" class="track-form" autocomplete="off">
+            <div class="input-wrapper">
+              <span class="at-symbol">@</span>
+              <input
+                type="text"
+                id="pageUrlInput"
+                class="url-input"
+                placeholder="Enter Facebook Page URL or username"
+                value="mrbeast"
+                required
+                spellcheck="false"
+              />
+              <button type="submit" id="submitBtn" class="track-btn">
+                <span class="btn-spinner" id="btnSpinner" style="display: none;"></span>
+                <span class="btn-text">Track</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Error Notification Box -->
+          <div id="errorBox" class="error-box" style="display: none;" role="alert">
+            <svg class="error-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <span id="errorMessage" class="error-text"></span>
+          </div>
+        </section>
+
+        <!-- Main Counter & Profile Display Section -->
+        <main class="main-display-section" id="resultCard">
+          <!-- Profile Avatar with Animated Rainbow Gradient Ring -->
+          <div class="avatar-ring-container">
+            <div class="avatar-ring-wrapper">
+              <img id="profileImage" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=80" alt="Profile DP" class="profile-avatar" referrerpolicy="no-referrer" />
+              <div id="avatarFallback" class="avatar-fallback" style="display: none;">T</div>
+            </div>
+            <div class="avatar-live-badge">
+              <span class="green-dot"></span> LIVE
+            </div>
+          </div>
+
+          <!-- Tracking Handle Pill -->
+          <div class="tracking-pill-container">
+            <a href="https://www.facebook.com/mrbeast" id="trackingLink" class="tracking-pill" target="_blank" rel="noopener">
+              <span class="red-dot">●</span> tracking <span id="trackingHandle" class="handle-text">@mrbeast</span> <span class="arrow-icon">↗</span>
+            </a>
+          </div>
+
+          <!-- Profile Name & Real-time Tagline -->
+          <h3 id="pageName" class="profile-title">MrBeast</h3>
+          <p class="profile-subtitle">Live-tracking <em id="subtitleHandle">@mrbeast</em>'s growth in real time ✨</p>
+
+          <!-- Massive Counter Display -->
+          <div class="huge-counter-container">
+            <span id="followerCount" class="huge-follower-number">18,500,200</span>
+          </div>
+          <div id="counterSublabel" class="counter-sublabel">MRBEAST FOLLOWERS</div>
+
+          <!-- Live Monitoring Progress Bar & Pause Control -->
+          <div class="monitoring-bar">
+            <div class="monitoring-left">
+              <div class="ring-spinner" id="ringSpinner"></div>
+              <div class="monitoring-info">
+                <div class="monitoring-title">Live monitoring <span id="countdownTimer" class="gold-timer">5.0s</span></div>
+                <div id="monitoringSubtext" class="monitoring-subtext">Fetching from Facebook servers</div>
+              </div>
+            </div>
+            <div class="monitoring-controls">
+              <button type="button" id="pauseBtn" class="pause-btn" title="Pause / Resume Live Monitoring">
+                <span id="pauseIcon">||</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 Key Analytics Cards Grid -->
+          <div class="analytics-grid">
+            <div class="stat-card">
+              <div class="stat-label">TARGET USERNAME</div>
+              <div id="targetUsernameVal" class="stat-value text-white">@mrbeast</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">SESSION DELTA</div>
+              <div id="sessionDeltaVal" class="stat-value text-green">+0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">POLL ITERATIONS</div>
+              <div id="pollIterationsVal" class="stat-value text-white">6 ticks</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">LAST VERIFIED</div>
+              <div id="lastVerifiedVal" class="stat-value text-white">12:38:00 PM</div>
+            </div>
+          </div>
+
+          <!-- Sparkline Trend Chart Card -->
+          <div class="sparkline-card">
+            <div class="sparkline-header">
+              <div class="sparkline-title">
+                <svg class="sparkline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+                <span>In-Session Follower Trend Sparkline</span>
+              </div>
+              <div class="sparkline-subtext">Live updates accumulate history below</div>
+            </div>
+            <div class="sparkline-container">
+              <svg id="sparklineSvg" class="sparkline-svg" viewBox="0 0 800 120" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="sparklineGlow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ec4899" stop-opacity="0.3" />
+                    <stop offset="100%" stop-color="#ec4899" stop-opacity="0.0" />
+                  </linearGradient>
+                </defs>
+                <path id="sparklineArea" d="M 0 60 L 800 60 L 800 120 L 0 120 Z" fill="url(#sparklineGlow)" />
+                <path id="sparklinePath" d="M 0 60 L 800 60" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round" />
+                <circle id="sparklineDot" cx="800" cy="60" r="4" fill="#ec4899" class="pulsing-dot" />
+              </svg>
+            </div>
+          </div>
+        </main>
+
+        <!-- Promoted Accounts Section -->
+        <section class="accounts-section">
+          <div class="section-header-row">
+            <div class="section-title-box">
+              <span class="gold-icon">🔒</span>
+              <h2 class="section-title">PROMOTED ACCOUNTS</h2>
+            </div>
+            <span class="section-sublabel">tap to track a promoted account</span>
+          </div>
+          <div class="accounts-grid grid-2">
+            <button type="button" class="account-card promoted-card" data-username="romitkryadav">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Romit Kr Yadav" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">Romit Kr Yadav</div>
+                <div class="account-handle">@romitkryadav</div>
+              </div>
+            </button>
+
+            <button type="button" class="account-card promoted-card" data-username="abhijit_yadav_0018">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Abhijit Kumar" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">Abhijit Kumar</div>
+                <div class="account-handle">@abhijit_yadav_0018</div>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <!-- Popular Live Accounts Section -->
+        <section class="accounts-section">
+          <div class="section-header-row">
+            <div class="section-title-box">
+              <span class="gold-icon">📍</span>
+              <h2 class="section-title">POPULAR LIVE ACCOUNTS</h2>
+            </div>
+            <span class="section-sublabel">click to switch track target</span>
+          </div>
+          <div class="accounts-grid grid-3">
+            <button type="button" class="account-card" data-username="neymarjr">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Neymar Jr" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">Neymar Jr</div>
+                <div class="account-handle">@neymarjr</div>
+              </div>
+            </button>
+
+            <button type="button" class="account-card" data-username="kimkardashian">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80" alt="Kim Kardashian" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">Kim Kardashian</div>
+                <div class="account-handle">@kimkardashian</div>
+              </div>
+            </button>
+
+            <button type="button" class="account-card" data-username="mrbeast">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80" alt="MrBeast" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">MrBeast</div>
+                <div class="account-handle">@mrbeast</div>
+              </div>
+            </button>
+
+            <button type="button" class="account-card" data-username="cristiano">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=100&auto=format&fit=crop&q=80" alt="Cristiano Ronaldo" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">Cristiano Ronaldo</div>
+                <div class="account-handle">@cristiano</div>
+              </div>
+            </button>
+
+            <button type="button" class="account-card" data-username="meta">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=100&auto=format&fit=crop&q=80" alt="Meta" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">Meta</div>
+                <div class="account-handle">@meta</div>
+              </div>
+            </button>
+
+            <button type="button" class="account-card" data-username="cocacola">
+              <div class="account-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=100&auto=format&fit=crop&q=80" alt="Coca-Cola" class="account-avatar" />
+              </div>
+              <div class="account-info">
+                <div class="account-name">Coca-Cola</div>
+                <div class="account-handle">@cocacola</div>
+              </div>
+            </button>
+          </div>
+          </section>
+           <section class="info-section" aria-labelledby="infoHeading">
+      <div class="container">
+        <article class="info-content">
+          <h2>Live Facebook Follower Counter — User Growth Tracking and Analytics</h2>
+          <p>
+Monitoring the number of followers over the Facebook standard profile or Page is not always easy when trying to track changes over time. The usage of a Facebook Follower Counter lets you simply monitor the publicly available count of followers of the Facebook profile or Page without the need to frequently open the app and do the manual checking.
+
+Whether you need to track your audience or look into the progress of a famous creator, or check the progress of your competitors, or compare the social networks, with the help of the follower counter, it becomes easier to check the number of followers whenever needed. Input a proper Facebook profile or Page, monitor the follower statistics, and track changes in one place.
+
+This tool works with publicly available information. You do not need to share your Facebook password, download any applications, or try to bypass Facebook’s privacy settings.</p>
+    <h2>Track Facebook Follower Growth Without Constant Refreshing</h2> 
+    <p>Repeatedly checking a Facebook account for its follower changes is an impractical approach, especially when monitoring an account during an event in a campaign, launch of a new product, viral post, or major publication release. 
+
+Use a special follower tracker to have a clean interface for accessing the needed information about the followers. You don’t need to flip between the pages of Facebook every time. 
+
+In addition, if you are monitoring accounts where the information about followers is available in the public domain, you will be able to learn how to easily track the growth. 
+
+For instance, it will be important to keep in mind that if your account gets from 5,000 followers to 5,250 you should not only learn the present figure but also the fact of +250 changes.</p>     
+<h2>Importance of Facebook Follower Counts</h2>
+<p>A follower count serves as an easy measurement of an audience on Facebook. For creators, businesses, personalities, and marketers, increase or decrease of the follower count can help in assessing the performance of their pages.
+
+An increase in the number of followers can mean that the content is reaching more users, while a sudden fall may indicate cases of audience loss or changes in content strategy. The follower count must not be regarded as the only indicator of success. So, measures like engagement, reach, video views, comments, shares, and conversions can tell much more about how good the audience is than the follower count does. Consequently, the Facebook Follower Counter is of the most value only when integrated with other social media metrics.</p> 
+<h2>Track Public Facebook Creators and Competitors</h2>    
+<p>Checking multiple Facebook Pages manually can be a chore at times.
+
+ 
+
+When researching creators, brands, public Pages, or competitors, a follower tracker can help in alleviating the need to keep lots of screenshots or spreadsheets with the information sources on the audience growth.
+
+ 
+
+Your follower tracker makes it possible to take measurements of several accounts and measure their audience size over time.
+
+ 
+
+For instance, if a marketer wants to improve their knowledge about five competing Pages, they can track their public followers on a weekly basis and find out which Page has a faster growth rate.
+
+ 
+
+This information can form the basis for simple competitor research, but it is important to remember that follower count should not be the sole criterion for measuring the quality of a Page.</p>     
+
+        <section class="faq-section">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <div class="faq-list" role="list">
+            <div class="faq-item active" role="listitem">
+              <button type="button" class="faq-question" aria-expanded="true" aria-controls="faqAnswer1">
+                <span>What is a Facebook Follower Counter?</span>
+                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div id="faqAnswer1" class="faq-answer" role="region">
+                <p>The Facebook follower counter refers to an online platform that allows individuals to verify the follower count of that particular Facebook page or profile.</p>
+              </div>
+            </div>
+            <div class="faq-item" role="listitem">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer2">
+                <span>Is there an update of follower number constantly?</span>
+                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div id="faqAnswer2" class="faq-answer" role="region" hidden>
+                <p>Follower counts experience constant changes. However, third-party apps cannot access Facebook's internal real-time information. There may be slight differences and delays caused by public information available within the limits of technology.</p>
+              </div>
+            </div>
+            <div class="faq-item" role="listitem">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer3">
+                <span>Is it possible to view Facebook followers without signing in?</span>
+                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div id="faqAnswer3" class="faq-answer" role="region" hidden>
+                <p>Yes, when the follower details are made public, you can retrieve that information through the mileage log without needing your Facebook account password or signing in to your account.</p>
+              </div>
+            </div>
+            <div class="faq-item" role="listitem">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer4">
+                <span>Can a Facebook Follower Counter be used on mobile phone devices?</span>
+                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div id="faqAnswer4" class="faq-answer" role="region" hidden>
+                <p>Yes, in most cases, the browser-based Facebook follower counter can also be run on mobile devices with an appropriate configuration needed. There is no special application necessary when using such a tool.</p>
+              </div>
+              </div>
+              <div class="faq-item" role="listitem">
+                <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer5">
+                  <span>Is it secure to utilize a Facebook Follower Counter? </span>
+                  <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div id="faqAnswer5" class="faq-answer" role="region" hidden>
+                  <p>A follower count tool is secure as long as it does not ask for any private information. Steer clear of anything that requires your credentials, like passwords or authentication codes.</p>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="/" class="logo" aria-label="FBviddl Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon">FBviddl</a>
+        <p>The fastest way to download public Facebook videos, reels, images, and profile pictures. Simple, secure, and free for all devices.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 FBviddl. All rights reserved.</div>
+      <div>FBviddl is not affiliated with or endorsed by Facebook or Meta.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Client JavaScript -->
+<script src="/livefbcount.js" defer></script>
+</body>
+</html>
