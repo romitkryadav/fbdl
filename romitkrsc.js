@@ -132,14 +132,14 @@ async function fetchDP(profileUrl) {
 // LOADING
 // ========================================
 function setLoading(state) {
-
+  if (!submitBtn) return;
   if (state) {
 
     submitBtn.disabled = true;
     submitBtn.classList.add("loading");
     submitBtn.setAttribute("aria-busy", "true");
 
-    btnText.classList.add("hidden");
+    if (btnText) btnText.classList.add("hidden");
 
     if (loadingBox) {
       loadingBox.hidden = false;
@@ -152,12 +152,7 @@ function setLoading(state) {
     submitBtn.classList.remove("loading");
     submitBtn.removeAttribute("aria-busy");
 
-    btnText.classList.remove("hidden");
-
-    if (loadingBox) {
-      loadingBox.hidden = true;
-      loadingBox.classList.remove("active");
-    }
+    if (btnText) btnText.classList.remove("hidden");
 
     if (loadingBox) {
       loadingBox.hidden = true;
@@ -170,7 +165,7 @@ function setLoading(state) {
 // ERROR
 // ========================================
 function showError(message) {
-
+  if (!errorText || !errorMessage) return;
   errorText.textContent = message;
 
   errorMessage.classList.remove("hidden");
@@ -178,7 +173,7 @@ function showError(message) {
 }
 
 function hideError() {
-
+  if (!errorMessage) return;
   errorMessage.classList.add("hidden");
   errorMessage.hidden = true;
 }
@@ -187,17 +182,16 @@ function hideError() {
 // RESULT
 // ========================================
 function hideResult() {
+  if (!resultSection) return;
 
   resultSection.classList.add("hidden");
   resultSection.classList.remove("active");
   resultSection.hidden = true;
 
-  videoSource.src = "";
-
-  videoPreview.pause();
-
-  hdDownload.href = "#";
-  sdDownload.href = "#";
+  if (videoSource) videoSource.src = "";
+  if (videoPreview) videoPreview.pause();
+  if (hdDownload) hdDownload.href = "#";
+  if (sdDownload) sdDownload.href = "#";
 }
 
 function showResult(hd, sd, worker) {
@@ -289,15 +283,18 @@ if (sdDownload) {
 // ========================================
 // VIDEO ERROR HANDLER
 // ========================================
-videoPreview.addEventListener("error", (e) => {
-  console.log("Video load error:", e);
-  showError("Failed to load video preview. You can still try downloading.");
-});
+if (videoPreview) {
+  videoPreview.addEventListener("error", (e) => {
+    console.log("Video load error:", e);
+    showError("Failed to load video preview. You can still try downloading.");
+  });
+}
 
 // ========================================
 // SCROLL NOTIFICATION
 // ========================================
 function handleScroll() {
+  if (!scrollNotification) return;
   if (window.scrollY > 300) {
     scrollNotification.classList.remove("hidden");
   } else {
@@ -341,54 +338,56 @@ if (scrollToUpdatesTopBtn) {
 // ========================================
 // VIDEO FORM
 // ========================================
-downloadForm.addEventListener("submit", async (e) => {
+if (downloadForm) {
+  downloadForm.addEventListener("submit", async (e) => {
 
-  e.preventDefault();
+    e.preventDefault();
 
-  const url = videoUrlInput.value.trim();
+    const url = videoUrlInput ? videoUrlInput.value.trim() : "";
 
-  if (!url) return;
+    if (!url) return;
 
-  if (
-    !url.includes("facebook.com") &&
-    !url.includes("fb.watch")
-  ) {
+    if (
+      !url.includes("facebook.com") &&
+      !url.includes("fb.watch")
+    ) {
 
-    showError("Please enter valid Facebook URL.");
+      showError("Please enter valid Facebook URL.");
 
-    return;
-  }
+      return;
+    }
 
-  setLoading(true);
+    setLoading(true);
 
-  hideError();
-
-  hideResult();
-
-  try {
-
-    const data = await fetchVideo(url);
-
-    console.log(data);
-
-    showResult(
-      data.hd,
-      data.sd,
-      data.workerUsed
-    );
-
-  } catch (e) {
-
-    console.log(e);
+    hideError();
 
     hideResult();
 
-    showError(
-      e.message || "All workers failed."
-    );
+    try {
 
-  } finally {
+      const data = await fetchVideo(url);
 
-    setLoading(false);
-  }
-});
+      console.log(data);
+
+      showResult(
+        data.hd,
+        data.sd,
+        data.workerUsed
+      );
+
+    } catch (e) {
+
+      console.log(e);
+
+      hideResult();
+
+      showError(
+        e.message || "All workers failed."
+      );
+
+    } finally {
+
+      setLoading(false);
+    }
+  });
+}

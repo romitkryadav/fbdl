@@ -1,43 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Live Follower Counter - Real-Time Growth Tracking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="Check live public follower counts instantly. Modern, transparent tool powered by Cloudflare Worker API without access tokens or fake estimates." />
-<meta name="keywords" content="live follower counter, threads follower counter, facebook follower counter, follower count live, real time follower checker" />
-<meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1" />
-<meta name="author" content="Romit Kr Yadav" />
-<meta name="application-name" content="Fbviddl" />
-<meta name="theme-color" content="#4f46e5" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://fbviddl.com/facebook-follower-counter" />
-<meta property="og:title" content="Live Follower Counter - Real-Time Growth Tracking" />
-<meta property="og:description" content="Check live public follower counts instantly. Modern, transparent tool powered by Cloudflare Worker API without access tokens or fake estimates." />
-<meta property="og:site_name" content="Facebook Follower Counter" />
-<meta property="og:image" content="https://fbviddl.com/og-image.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://fbviddl.com/facebook-follower-counter" />
-<meta name="twitter:title" content="Live Follower Counter - Real-Time Growth Tracking" />
-<meta name="twitter:description" content="Check live public follower counts instantly. Modern, transparent tool powered by Cloudflare Worker API without access tokens or fake estimates." />
-<meta name="twitter:image" content="https://fbviddl.com/og-image.jpg" />
-<link rel="canonical" href="https://fbviddl.com/facebook-follower-counter" />
-<link rel="icon" type="image/png" href="https://fbviddl.com/favicon.png" />
+<!-- Primary SEO -->
+<title>Facebook Follower Counter - Live FB Follower Count Tracker | FBviddl</title>
+<meta name="description" content="Track live Facebook follower counts for any public profile or page. Real-time growth dashboard with trend analytics — no login, no app required. Free on FBviddl.">
+<meta name="keywords" content="live follower counter, facebook follower counter, facebook follower count, real time follower tracker, fb page follower count, fbviddl">
+<meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1, max-snippet:-1">
+<meta name="author" content="Romit Kr Yadav">
+<meta name="application-name" content="FBviddl">
+<meta name="theme-color" content="#4f46e5">
 
-<!-- Google Fonts: Playfair Display for Serif headings, JetBrains Mono for counters, Plus Jakarta Sans for body -->
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fbviddl.com/facebook-follower-counter">
+<meta property="og:title" content="Facebook Follower Counter - Live FB Follower Count Tracker | FBviddl">
+<meta property="og:description" content="Track live Facebook follower counts for any public profile or page. Real-time growth dashboard with trend analytics — no login, no app required.">
+<meta property="og:site_name" content="FBviddl">
+<meta property="og:image" content="https://fbviddl.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FBviddl - Facebook Follower Counter">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@fbviddl">
+<meta name="twitter:url" content="https://fbviddl.com/facebook-follower-counter">
+<meta name="twitter:title" content="Facebook Follower Counter - Live FB Follower Count Tracker | FBviddl">
+<meta name="twitter:description" content="Track live Facebook follower counts for any public profile or page. Real-time growth dashboard with trend analytics — no login, no app required.">
+<meta name="twitter:image" content="https://fbviddl.com/og-image.jpg">
+<meta name="twitter:image:alt" content="FBviddl - Facebook Follower Counter">
+
+<!-- Canonical & Language -->
+<link rel="canonical" href="https://fbviddl.com/facebook-follower-counter">
+<link rel="alternate" hreflang="en" href="https://fbviddl.com/facebook-follower-counter">
+<link rel="alternate" hreflang="x-default" href="https://fbviddl.com/facebook-follower-counter">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://fbviddl.com/favicon.png">
+<link rel="apple-touch-icon" href="https://fbviddl.com/favicon.png">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 
+<!-- Critical CSS -->
+<link rel="preload" href="/romitkrfb.css" as="style">
 <link rel="stylesheet" href="/romitkrfb.css">
 <link rel="stylesheet" href="/fbcount.css">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fbviddl.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Facebook Follower Counter", "item": "https://fbviddl.com/facebook-follower-counter" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://fbviddl.com/facebook-follower-counter#webapp",
+  "name": "Facebook Follower Counter",
+  "url": "https://fbviddl.com/facebook-follower-counter",
+  "description": "Free real-time tool to track the live follower count of any public Facebook profile or page.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "FBviddl", "url": "https://fbviddl.com/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is a Facebook Follower Counter?", "acceptedAnswer": { "@type": "Answer", "text": "A Facebook Follower Counter is a free online tool that lets you check and track the live follower count of any public Facebook profile or Page. FBviddl's counter fetches public data from Facebook and updates automatically every few seconds." } },
+    { "@type": "Question", "name": "How do I check a Facebook Page's follower count?", "acceptedAnswer": { "@type": "Answer", "text": "Copy the URL of the public Facebook profile or Page, go to fbviddl.com/facebook-follower-counter, paste it into the input field, and click Track. The live follower count appears within seconds." } },
+    { "@type": "Question", "name": "Is the follower count shown in real time?", "acceptedAnswer": { "@type": "Answer", "text": "The counter refreshes every few seconds using publicly available data. There may be a slight delay since FBviddl reads public-facing data rather than Facebook's internal real-time API." } },
+    { "@type": "Question", "name": "Can I check the follower count of a private Facebook account?", "acceptedAnswer": { "@type": "Answer", "text": "No. FBviddl only retrieves follower counts for publicly accessible profiles and Pages. Private accounts and Pages that hide their follower count cannot be tracked." } },
+    { "@type": "Question", "name": "What is the difference between Facebook followers and Facebook Page likes?", "acceptedAnswer": { "@type": "Answer", "text": "Followers see a Page's posts in their feed. Likes represent users who liked the Page. The two counts often differ. Follower count is generally more relevant for measuring reach." } },
+    { "@type": "Question", "name": "Can I view Facebook followers without signing in?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. FBviddl reads publicly available follower data without any Facebook login, password, or authentication." } },
+    { "@type": "Question", "name": "Can a Facebook Follower Counter be used on mobile devices?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. FBviddl's follower counter is fully browser-based and works on Android and iPhone in Chrome, Safari, or any modern mobile browser." } },
+    { "@type": "Question", "name": "Why should I track Facebook follower count instead of checking manually?", "acceptedAnswer": { "@type": "Answer", "text": "FBviddl's live counter auto-refreshes and tracks session delta, showing exactly how many followers were gained or lost since you started tracking. This is essential during live events, campaigns, or launches." } },
+    { "@type": "Question", "name": "Is the Facebook Follower Counter free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free. No subscription, sign-up, or hidden fees required." } },
+    { "@type": "Question", "name": "Is it secure to use a Facebook Follower Counter?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. FBviddl never asks for your Facebook password or any personal information. It reads only publicly available data over HTTPS. Avoid any tool that requests your Facebook credentials." } }
+  ]
+}
+</script>
 </head>
 <body>
+
 <header class="header" id="siteHeader" role="banner">
   <div class="container header-inner">
-    <a href="/" class="logo" aria-label="FBviddl - Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon">FBviddl</a>
+    <a href="/" class="logo" aria-label="FBviddl - Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon" width="36" height="36" loading="eager">FBviddl</a>
     <nav class="nav-desktop" role="navigation" aria-label="Primary Navigation">
       <a href="/" class="nav-link">Home</a>
       <a href="/blog" class="nav-link">Blog</a>
@@ -59,9 +125,12 @@
   <a href="/contact" class="nav-link">Contact</a>
 </nav>
 
-<main id="mainContent" role="main">
+<main id="mainContent">
+
+  <!-- Hero / Tool section -->
   <section class="hero-section" id="downloader" aria-labelledby="heroHeading">
     <div class="container">
+
       <div class="hero-copy">
         <h1 class="hero-title" id="heroHeading">Facebook Follower Counter</h1>
         <p class="hero-subtitle hero-subtitle-sm">Real-time public follower count tracker. Live dashboard with trend chart and analytics, no login required.</p>
@@ -71,7 +140,7 @@
         <a href="/" class="tool-tab" id="toolVideoTab" role="tab" aria-selected="false" aria-label="Video Downloader">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
         </a>
-        <a href="/" class="tool-tab" id="toolReelTab" role="tab" aria-selected="false" aria-label="Reel Downloader">
+        <a href="/facebook-reel-downloader" class="tool-tab" id="toolReelTab" role="tab" aria-selected="false" aria-label="Reel Downloader">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
         </a>
         <a href="/facebook-image-downloader" class="tool-tab" id="toolImageTab" role="tab" aria-selected="false" aria-label="Image Downloader">
@@ -80,21 +149,21 @@
         <a href="/facebook-dp-downloader" class="tool-tab" id="toolDpTab" role="tab" aria-selected="false" aria-label="Profile DP Downloader">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
-        <a href="/facebook-follower-counter" class="tool-tab active" id="toolGrowthTab" role="tab" aria-selected="true" aria-label="Follower Counter">
+        <a href="/facebook-follower-counter" class="tool-tab active" id="toolGrowthTab" role="tab" aria-selected="true" aria-current="page" aria-label="Follower Counter">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
         </a>
       </div>
 
-      <!-- Background Grid Canvas -->
-      <div class="bg-grid"></div>
+      <!-- Background Canvas -->
+      <div class="bg-grid" aria-hidden="true"></div>
 
       <div class="app-wrapper">
 
-        <!-- Search / Track Input Box Card -->
-        <section class="search-box-card">
+        <!-- Search / Track Input -->
+        <section class="search-box-card" aria-label="Follower Counter Input">
           <form id="counterForm" class="track-form" autocomplete="off">
             <div class="input-wrapper">
-              <span class="at-symbol">@</span>
+              <span class="at-symbol" aria-hidden="true">@</span>
               <input
                 type="text"
                 id="pageUrlInput"
@@ -103,70 +172,71 @@
                 value="mrbeast"
                 required
                 spellcheck="false"
-              />
-              <button type="submit" id="submitBtn" class="track-btn">
-                <span class="btn-spinner" id="btnSpinner" style="display: none;"></span>
+                aria-label="Facebook page URL or username"
+              >
+              <button type="submit" id="submitBtn" class="track-btn" aria-label="Track follower count">
+                <span class="btn-spinner" id="btnSpinner" style="display:none;" aria-hidden="true"></span>
                 <span class="btn-text">Track</span>
               </button>
             </div>
           </form>
 
-          <!-- Error Notification Box -->
-          <div id="errorBox" class="error-box" style="display: none;" role="alert">
-            <svg class="error-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div id="errorBox" class="error-box" style="display:none;" role="alert" aria-live="assertive">
+            <svg class="error-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
             </svg>
             <span id="errorMessage" class="error-text"></span>
           </div>
         </section>
 
-        <!-- Main Counter & Profile Display Section -->
-        <main class="main-display-section" id="resultCard">
-          <!-- Profile Avatar with Animated Rainbow Gradient Ring -->
+        <!-- Main Counter Display (div, not main — only one <main> allowed per page) -->
+        <div class="main-display-section" id="resultCard">
+
+          <!-- Profile Avatar -->
           <div class="avatar-ring-container">
             <div class="avatar-ring-wrapper">
-              <img id="profileImage" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=80" alt="Profile DP" class="profile-avatar" referrerpolicy="no-referrer" />
-              <div id="avatarFallback" class="avatar-fallback" style="display: none;">T</div>
+              <img id="profileImage" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=80" alt="Tracked profile avatar" class="profile-avatar" referrerpolicy="no-referrer" width="100" height="100">
+              <div id="avatarFallback" class="avatar-fallback" style="display:none;" aria-hidden="true">T</div>
             </div>
-            <div class="avatar-live-badge">
-              <span class="green-dot"></span> LIVE
+            <div class="avatar-live-badge" aria-label="Live tracking active">
+              <span class="green-dot" aria-hidden="true"></span> LIVE
             </div>
           </div>
 
           <!-- Tracking Handle Pill -->
           <div class="tracking-pill-container">
-            <a href="https://www.facebook.com/mrbeast" id="trackingLink" class="tracking-pill" target="_blank" rel="noopener">
-              <span class="red-dot">●</span> tracking <span id="trackingHandle" class="handle-text">@mrbeast</span> <span class="arrow-icon">↗</span>
+            <a href="https://www.facebook.com/mrbeast" id="trackingLink" class="tracking-pill" target="_blank" rel="noopener noreferrer">
+              <span class="red-dot" aria-hidden="true">●</span> tracking <span id="trackingHandle" class="handle-text">@mrbeast</span> <span class="arrow-icon" aria-hidden="true">↗</span>
             </a>
           </div>
 
-          <!-- Profile Name & Real-time Tagline -->
-          <h3 id="pageName" class="profile-title">MrBeast</h3>
-          <p class="profile-subtitle">Live-tracking <em id="subtitleHandle">@mrbeast</em>'s growth in real time ✨</p>
+          <!-- Profile Name -->
+          <h2 id="pageName" class="profile-title">MrBeast</h2>
+          <p class="profile-subtitle">Live-tracking <em id="subtitleHandle">@mrbeast</em>'s growth in real time</p>
 
-          <!-- Massive Counter Display -->
-          <div class="huge-counter-container">
+          <!-- Follower Counter -->
+          <div class="huge-counter-container" aria-live="polite" aria-atomic="true">
             <span id="followerCount" class="huge-follower-number">18,500,200</span>
           </div>
           <div id="counterSublabel" class="counter-sublabel">MRBEAST FOLLOWERS</div>
 
-          <!-- Live Monitoring Progress Bar & Pause Control -->
+          <!-- Live Monitoring Bar -->
           <div class="monitoring-bar">
             <div class="monitoring-left">
-              <div class="ring-spinner" id="ringSpinner"></div>
+              <div class="ring-spinner" id="ringSpinner" aria-hidden="true"></div>
               <div class="monitoring-info">
                 <div class="monitoring-title">Live monitoring <span id="countdownTimer" class="gold-timer">5.0s</span></div>
                 <div id="monitoringSubtext" class="monitoring-subtext">Fetching from Facebook servers</div>
               </div>
             </div>
             <div class="monitoring-controls">
-              <button type="button" id="pauseBtn" class="pause-btn" title="Pause / Resume Live Monitoring">
-                <span id="pauseIcon">||</span>
+              <button type="button" id="pauseBtn" class="pause-btn" aria-label="Pause or resume live monitoring">
+                <span id="pauseIcon" aria-hidden="true">||</span>
               </button>
             </div>
           </div>
 
-          <!-- 4 Key Analytics Cards Grid -->
+          <!-- Analytics Cards -->
           <div class="analytics-grid">
             <div class="stat-card">
               <div class="stat-label">TARGET USERNAME</div>
@@ -186,11 +256,11 @@
             </div>
           </div>
 
-          <!-- Sparkline Trend Chart Card -->
+          <!-- Sparkline Trend Chart -->
           <div class="sparkline-card">
             <div class="sparkline-header">
               <div class="sparkline-title">
-                <svg class="sparkline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="sparkline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                 </svg>
                 <span>In-Session Follower Trend Sparkline</span>
@@ -198,44 +268,44 @@
               <div class="sparkline-subtext">Live updates accumulate history below</div>
             </div>
             <div class="sparkline-container">
-              <svg id="sparklineSvg" class="sparkline-svg" viewBox="0 0 800 120" preserveAspectRatio="none">
+              <svg id="sparklineSvg" class="sparkline-svg" viewBox="0 0 800 120" preserveAspectRatio="none" role="img" aria-label="Follower trend sparkline chart">
                 <defs>
                   <linearGradient id="sparklineGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#ec4899" stop-opacity="0.3" />
-                    <stop offset="100%" stop-color="#ec4899" stop-opacity="0.0" />
+                    <stop offset="0%" stop-color="#ec4899" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#ec4899" stop-opacity="0.0"/>
                   </linearGradient>
                 </defs>
-                <path id="sparklineArea" d="M 0 60 L 800 60 L 800 120 L 0 120 Z" fill="url(#sparklineGlow)" />
-                <path id="sparklinePath" d="M 0 60 L 800 60" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round" />
-                <circle id="sparklineDot" cx="800" cy="60" r="4" fill="#ec4899" class="pulsing-dot" />
+                <path id="sparklineArea" d="M 0 60 L 800 60 L 800 120 L 0 120 Z" fill="url(#sparklineGlow)"/>
+                <path id="sparklinePath" d="M 0 60 L 800 60" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round"/>
+                <circle id="sparklineDot" cx="800" cy="60" r="4" fill="#ec4899" class="pulsing-dot"/>
               </svg>
             </div>
           </div>
-        </main>
 
-        <!-- Promoted Accounts Section -->
-        <section class="accounts-section">
+        </div><!-- /.main-display-section -->
+
+        <!-- Promoted Accounts -->
+        <section class="accounts-section" aria-labelledby="promotedHeading">
           <div class="section-header-row">
             <div class="section-title-box">
-              <span class="gold-icon">🔒</span>
-              <h2 class="section-title">PROMOTED ACCOUNTS</h2>
+              <span class="gold-icon" aria-hidden="true">🔒</span>
+              <h2 class="section-title" id="promotedHeading">PROMOTED ACCOUNTS</h2>
             </div>
             <span class="section-sublabel">tap to track a promoted account</span>
           </div>
           <div class="accounts-grid grid-2">
-            <button type="button" class="account-card promoted-card" data-username="romitkryadav">
+            <button type="button" class="account-card promoted-card" data-username="mr.romitkryadav" aria-label="Track Romit Kr Yadav">
               <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Romit Kr Yadav" class="account-avatar" />
+                <img src="https://fbviddl.com/dp/romitkryadav.jpg" alt="Romit Kr Yadav" class="account-avatar" width="90" height="90" loading="lazy">
               </div>
               <div class="account-info">
                 <div class="account-name">Romit Kr Yadav</div>
-                <div class="account-handle">@romitkryadav</div>
+                <div class="account-handle">@mr.romitkryadav</div>
               </div>
             </button>
-
-            <button type="button" class="account-card promoted-card" data-username="abhijit_yadav_0018">
+            <button type="button" class="account-card promoted-card" data-username="abhijit_yadav_0018" aria-label="Track Abhijit Kumar">
               <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Abhijit Kumar" class="account-avatar" />
+                <img src="https://fbviddl.com/dp/abhijeetkumar.jpg" alt="Abhijit Kumar" class="account-avatar" width="90" height="90" loading="lazy">
               </div>
               <div class="account-info">
                 <div class="account-name">Abhijit Kumar</div>
@@ -245,175 +315,252 @@
           </div>
         </section>
 
-        <!-- Popular Live Accounts Section -->
-        <section class="accounts-section">
+        <!-- Popular Live Accounts -->
+        <section class="accounts-section" aria-labelledby="popularHeading">
           <div class="section-header-row">
             <div class="section-title-box">
-              <span class="gold-icon">📍</span>
-              <h2 class="section-title">POPULAR LIVE ACCOUNTS</h2>
+              <span class="gold-icon" aria-hidden="true">📍</span>
+              <h2 class="section-title" id="popularHeading">POPULAR LIVE ACCOUNTS</h2>
             </div>
             <span class="section-sublabel">click to switch track target</span>
           </div>
           <div class="accounts-grid grid-3">
-            <button type="button" class="account-card" data-username="neymarjr">
+            <button type="button" class="account-card" data-username="cristiano" aria-label="Track Cristiano Ronaldo">
               <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Neymar Jr" class="account-avatar" />
-              </div>
-              <div class="account-info">
-                <div class="account-name">Neymar Jr</div>
-                <div class="account-handle">@neymarjr</div>
-              </div>
-            </button>
-
-            <button type="button" class="account-card" data-username="kimkardashian">
-              <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80" alt="Kim Kardashian" class="account-avatar" />
-              </div>
-              <div class="account-info">
-                <div class="account-name">Kim Kardashian</div>
-                <div class="account-handle">@kimkardashian</div>
-              </div>
-            </button>
-
-            <button type="button" class="account-card" data-username="mrbeast">
-              <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80" alt="MrBeast" class="account-avatar" />
-              </div>
-              <div class="account-info">
-                <div class="account-name">MrBeast</div>
-                <div class="account-handle">@mrbeast</div>
-              </div>
-            </button>
-
-            <button type="button" class="account-card" data-username="cristiano">
-              <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=100&auto=format&fit=crop&q=80" alt="Cristiano Ronaldo" class="account-avatar" />
+                <img src="https://fbviddl.com/dp/cristiano.jpg" alt="Cristiano Ronaldo" class="account-avatar" width="90" height="90" loading="lazy">
               </div>
               <div class="account-info">
                 <div class="account-name">Cristiano Ronaldo</div>
                 <div class="account-handle">@cristiano</div>
               </div>
             </button>
-
-            <button type="button" class="account-card" data-username="meta">
+            <button type="button" class="account-card" data-username="samsungindia" aria-label="Track Samsung India">
               <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=100&auto=format&fit=crop&q=80" alt="Meta" class="account-avatar" />
+                <img src="https://fbviddl.com/dp/samsungindia.jpg" alt="Samsung India" class="account-avatar" width="90" height="90" loading="lazy">
               </div>
               <div class="account-info">
-                <div class="account-name">Meta</div>
-                <div class="account-handle">@meta</div>
+                <div class="account-name">Samsung India</div>
+                <div class="account-handle">@samsungindia</div>
               </div>
             </button>
-
-            <button type="button" class="account-card" data-username="cocacola">
+            <button type="button" class="account-card" data-username="facebook" aria-label="Track Facebook">
               <div class="account-avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=100&auto=format&fit=crop&q=80" alt="Coca-Cola" class="account-avatar" />
+                <img src="https://fbviddl.com/dp/facebook.jpg" alt="Facebook" class="account-avatar" width="90" height="90" loading="lazy">
               </div>
               <div class="account-info">
-                <div class="account-name">Coca-Cola</div>
-                <div class="account-handle">@cocacola</div>
+                <div class="account-name">Facebook</div>
+                <div class="account-handle">@facebook</div>
+              </div>
+            </button>
+            <button type="button" class="account-card" data-username="5min.crafts" aria-label="Track 5 Minutes Craft">
+              <div class="account-avatar-wrapper">
+                <img src="https://fbviddl.com/dp/5-minutescraft.jpg" alt="5 Minutes Craft" class="account-avatar" width="90" height="90" loading="lazy">
+              </div>
+              <div class="account-info">
+                <div class="account-name">5 Minutes Craft</div>
+                <div class="account-handle">@5min.crafts</div>
+              </div>
+            </button>
+            <button type="button" class="account-card" data-username="mrbean" aria-label="Track Mrbean">
+              <div class="account-avatar-wrapper">
+                <img src="https://fbviddl.com/dp/mrbean.jpg" alt="Mrbean" class="account-avatar" width="90" height="90" loading="lazy">
+              </div>
+              <div class="account-info">
+                <div class="account-name">Mrbean</div>
+                <div class="account-handle">@mrbean</div>
+              </div>
+            </button>
+            <button type="button" class="account-card" data-username="RealMadrid" aria-label="Track Real Madrid">
+              <div class="account-avatar-wrapper">
+                <img src="https://fbviddl.com/dp/realmardrid.jpg" alt="Real Madrid" class="account-avatar" width="90" height="90" loading="lazy">
+              </div>
+              <div class="account-info">
+                <div class="account-name">Real Mardrid</div>
+                <div class="account-handle">@RealMadrid</div>
               </div>
             </button>
           </div>
-          </section>
-           <section class="info-section" aria-labelledby="infoHeading">
-      <div class="container">
-        <article class="info-content">
-          <h2>Live Facebook Follower Counter — User Growth Tracking and Analytics</h2>
-          <p>
-Monitoring the number of followers over the Facebook standard profile or Page is not always easy when trying to track changes over time. The usage of a Facebook Follower Counter lets you simply monitor the publicly available count of followers of the Facebook profile or Page without the need to frequently open the app and do the manual checking.
+        </section>
 
-Whether you need to track your audience or look into the progress of a famous creator, or check the progress of your competitors, or compare the social networks, with the help of the follower counter, it becomes easier to check the number of followers whenever needed. Input a proper Facebook profile or Page, monitor the follower statistics, and track changes in one place.
+      </div><!-- /.app-wrapper -->
 
-This tool works with publicly available information. You do not need to share your Facebook password, download any applications, or try to bypass Facebook’s privacy settings.</p>
-    <h2>Track Facebook Follower Growth Without Constant Refreshing</h2> 
-    <p>Repeatedly checking a Facebook account for its follower changes is an impractical approach, especially when monitoring an account during an event in a campaign, launch of a new product, viral post, or major publication release. 
+    </div><!-- /.container -->
+  </section><!-- /.hero-section -->
 
-Use a special follower tracker to have a clean interface for accessing the needed information about the followers. You don’t need to flip between the pages of Facebook every time. 
+  <!-- Info section -->
+  <section class="info-section" aria-labelledby="infoHeading">
+    <div class="container">
+      <article class="info-content">
+        <h2 id="infoHeading">Facebook Follower Counter — Track Live Follower Growth in Real Time</h2>
+        <p>Facebook follower count is one of the most visible signals of a public profile or Page's reach. For creators, brands, marketers, journalists, and curious users, knowing how many people follow an account — and how that number changes over time — provides genuine insight into an account's influence and audience momentum. Facebook does display follower counts on public profiles and Pages, but checking them manually one at a time is inefficient, and Facebook offers no dedicated tracking dashboard for external users.</p>
+        <p><strong>FBviddl's Facebook Follower Counter</strong> solves that. Enter the URL or username of any public Facebook profile or Page, press Track, and the tool fetches the current follower count from Facebook's public data and displays it on a live-updating dashboard. The count refreshes automatically every few seconds, giving you a real-time view of follower growth as it happens — during launches, live events, viral moments, or routine monitoring.</p>
+        <p>Need to download media from the profiles you are tracking? Use our <a href="/">Facebook Video Downloader</a>, <a href="/facebook-reel-downloader">Reel Downloader</a>, <a href="/facebook-image-downloader">Image Downloader</a>, or <a href="/facebook-dp-downloader">DP Downloader</a> alongside this tool.</p>
 
-In addition, if you are monitoring accounts where the information about followers is available in the public domain, you will be able to learn how to easily track the growth. 
+        <h2>How to Check a Facebook Follower Count — Step by Step</h2>
+        <ol>
+          <li>Open Facebook and navigate to the public profile or Page you want to track.</li>
+          <li>Copy the URL from your browser's address bar — for example, <em>facebook.com/pagename</em> or a username like <em>mrbeast</em>.</li>
+          <li>Paste the URL or username into the input field at the top of this page.</li>
+          <li>Click <strong>Track</strong>. The live follower dashboard loads within a few seconds.</li>
+          <li>Watch the counter update automatically. Use the Pause button to pause live refreshing when you want to capture a snapshot.</li>
+        </ol>
+        <p>You can also click any of the account cards in the Promoted or Popular sections below the tracker to instantly switch the dashboard to that account — no copy-paste required.</p>
 
-For instance, it will be important to keep in mind that if your account gets from 5,000 followers to 5,250 you should not only learn the present figure but also the fact of +250 changes.</p>     
-<h2>Importance of Facebook Follower Counts</h2>
-<p>A follower count serves as an easy measurement of an audience on Facebook. For creators, businesses, personalities, and marketers, increase or decrease of the follower count can help in assessing the performance of their pages.
+        <h2>Why Track Facebook Follower Count?</h2>
+        <p>There are many practical reasons to monitor follower counts beyond simple curiosity:</p>
+        <ul>
+          <li><strong>Creator growth monitoring</strong> — Track your own Page's follower growth during a content campaign, product launch, or after a viral post to measure real-world impact.</li>
+          <li><strong>Competitor benchmarking</strong> — Monitor competitor Pages to understand the pace of audience growth in your niche and identify which content strategies attract followers fastest.</li>
+          <li><strong>Influencer research</strong> — Verify an influencer's follower count before a brand partnership. Live follower data is more reliable than self-reported figures in a media kit.</li>
+          <li><strong>Journalism and research</strong> — Public figures, politicians, and institutions use Facebook to build audiences. Follower count data is a useful metric for analysts and researchers tracking public influence.</li>
+          <li><strong>Live event monitoring</strong> — Track a Page's follower growth in real time during a live broadcast, product reveal, or breaking news event to see audience surge in action.</li>
+        </ul>
 
-An increase in the number of followers can mean that the content is reaching more users, while a sudden fall may indicate cases of audience loss or changes in content strategy. The follower count must not be regarded as the only indicator of success. So, measures like engagement, reach, video views, comments, shares, and conversions can tell much more about how good the audience is than the follower count does. Consequently, the Facebook Follower Counter is of the most value only when integrated with other social media metrics.</p> 
-<h2>Track Public Facebook Creators and Competitors</h2>    
-<p>Checking multiple Facebook Pages manually can be a chore at times.
+        <h2>What the Live Dashboard Shows You</h2>
+        <p>The FBviddl follower counter dashboard displays more than just the current follower number. The analytics panel shows the <strong>session delta</strong> — how many followers the account has gained or lost since you started tracking in this session — alongside the <strong>poll count</strong> (how many times the tracker has refreshed) and the <strong>last verified time</strong> (the exact timestamp of the most recent data fetch). The sparkline chart at the bottom visualises the follower trend over the current tracking session, making it easy to see whether an account is gaining followers steadily, in bursts, or not at all.</p>
 
- 
+        <h2>Facebook Followers vs. Facebook Page Likes — What's the Difference?</h2>
+        <p>Many Facebook Pages display two separate numbers: <strong>Likes</strong> and <strong>Followers</strong>. These are not the same. When someone "likes" a Page, they also follow it by default — but they can choose to unlike a Page while continuing to follow it, or like a Page without following it. As a result, the follower count and the like count can diverge over time. Follower count is generally considered the more relevant metric because followers are the people who actually see the Page's posts in their feed. Personal profiles only have followers, not likes.</p>
 
-When researching creators, brands, public Pages, or competitors, a follower tracker can help in alleviating the need to keep lots of screenshots or spreadsheets with the information sources on the audience growth.
+        <h2>Follower Count vs. Engagement Rate</h2>
+        <p>A high follower count does not automatically mean high engagement. An account with 500,000 followers but 200 likes per post has a much lower engagement rate than an account with 10,000 followers and 800 likes per post. When evaluating a Page for partnership, advertising, or research purposes, always combine follower count data with engagement rate analysis for a complete picture. FBviddl's live tracker gives you the follower number; engagement analysis requires reviewing the actual posts directly on Facebook.</p>
 
- 
+        <h2>Limitations of This Tool</h2>
+        <p>The Facebook Follower Counter works exclusively with <strong>publicly accessible</strong> profiles and Pages. Private Facebook profiles, accounts that have set their follower count to hidden, or Pages that have been unpublished cannot be tracked. The follower count shown reflects the most recent publicly available data fetched from Facebook. There may be a slight delay between when a follower change occurs on Facebook and when it is reflected here, as this tool reads public-facing data rather than Facebook's internal real-time API.</p>
+        <p>This tool does not require or store any Facebook credentials. It never accesses any private account data. For full details, see our <a href="/privacy">Privacy Policy</a>.</p>
 
-Your follower tracker makes it possible to take measurements of several accounts and measure their audience size over time.
+        <h2>More Free Facebook Tools on FBviddl</h2>
+        <ul>
+          <li><a href="/"><strong>Facebook Video Downloader</strong></a> — Save any public Facebook video in HD or SD quality.</li>
+          <li><a href="/facebook-reel-downloader"><strong>Facebook Reel Downloader</strong></a> — Download public Reels as MP4 files instantly.</li>
+          <li><a href="/facebook-image-downloader"><strong>Facebook Image Downloader</strong></a> — Save photos from any public Facebook post in original resolution.</li>
+          <li><a href="/facebook-dp-downloader"><strong>Facebook DP Downloader</strong></a> — View and download full-size profile pictures from any public account.</li>
+        </ul>
+        <p>All tools are completely free with no login required. Questions? <a href="/contact">Contact our team</a>.</p>
+      </article>
+    </div>
+  </section>
 
- 
+  <!-- FAQ section -->
+  <section class="faq-section" id="faq" aria-labelledby="faqHeading">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="faqHeading">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Common questions about the FBviddl Facebook Follower Counter.</p>
+      </div>
+      <div class="faq-list" role="list">
 
-For instance, if a marketer wants to improve their knowledge about five competing Pages, they can track their public followers on a weekly basis and find out which Page has a faster growth rate.
+        <div class="faq-item active" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="true" aria-controls="faqAnswer1">
+            <span>What is a Facebook Follower Counter?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer1" class="faq-answer" role="region">
+            <p>A Facebook Follower Counter is a free online tool that lets you check and track the live follower count of any public Facebook profile or Page. FBviddl's follower counter fetches publicly available data from Facebook and displays it on a real-time dashboard that updates automatically every few seconds.</p>
+          </div>
+        </div>
 
- 
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer2">
+            <span>How do I check a Facebook Page's follower count?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer2" class="faq-answer" role="region" hidden>
+            <p>Copy the URL of the public Facebook profile or Page from your browser. Go to fbviddl.com/facebook-follower-counter, paste the URL or username into the input field, and click Track. The live follower count appears within seconds on the dashboard.</p>
+          </div>
+        </div>
 
-This information can form the basis for simple competitor research, but it is important to remember that follower count should not be the sole criterion for measuring the quality of a Page.</p>     
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer3">
+            <span>Is the follower count shown in real time?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer3" class="faq-answer" role="region" hidden>
+            <p>The counter refreshes automatically every few seconds using publicly available data from Facebook. There may be a slight delay between when a follower change occurs on Facebook and when it is reflected here, since FBviddl reads public-facing data rather than Facebook's internal real-time API. The dashboard shows a live-updating sparkline and session delta to track in-session changes.</p>
+          </div>
+        </div>
 
-        <section class="faq-section">
-          <h2 class="faq-title">Frequently Asked Questions</h2>
-          <div class="faq-list" role="list">
-            <div class="faq-item active" role="listitem">
-              <button type="button" class="faq-question" aria-expanded="true" aria-controls="faqAnswer1">
-                <span>What is a Facebook Follower Counter?</span>
-                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div id="faqAnswer1" class="faq-answer" role="region">
-                <p>The Facebook follower counter refers to an online platform that allows individuals to verify the follower count of that particular Facebook page or profile.</p>
-              </div>
-            </div>
-            <div class="faq-item" role="listitem">
-              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer2">
-                <span>Is there an update of follower number constantly?</span>
-                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div id="faqAnswer2" class="faq-answer" role="region" hidden>
-                <p>Follower counts experience constant changes. However, third-party apps cannot access Facebook's internal real-time information. There may be slight differences and delays caused by public information available within the limits of technology.</p>
-              </div>
-            </div>
-            <div class="faq-item" role="listitem">
-              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer3">
-                <span>Is it possible to view Facebook followers without signing in?</span>
-                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div id="faqAnswer3" class="faq-answer" role="region" hidden>
-                <p>Yes, when the follower details are made public, you can retrieve that information through the mileage log without needing your Facebook account password or signing in to your account.</p>
-              </div>
-            </div>
-            <div class="faq-item" role="listitem">
-              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer4">
-                <span>Can a Facebook Follower Counter be used on mobile phone devices?</span>
-                <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              <div id="faqAnswer4" class="faq-answer" role="region" hidden>
-                <p>Yes, in most cases, the browser-based Facebook follower counter can also be run on mobile devices with an appropriate configuration needed. There is no special application necessary when using such a tool.</p>
-              </div>
-              </div>
-              <div class="faq-item" role="listitem">
-                <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer5">
-                  <span>Is it secure to utilize a Facebook Follower Counter? </span>
-                  <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div id="faqAnswer5" class="faq-answer" role="region" hidden>
-                  <p>A follower count tool is secure as long as it does not ask for any private information. Steer clear of anything that requires your credentials, like passwords or authentication codes.</p>
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer4">
+            <span>Can I check the follower count of a private Facebook account?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer4" class="faq-answer" role="region" hidden>
+            <p>No. FBviddl can only retrieve follower counts for publicly accessible Facebook profiles and Pages. Accounts set to private, or Pages that have hidden their follower count, cannot be tracked. FBviddl never logs into Facebook or accesses any private account data.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer5">
+            <span>What is the difference between Facebook followers and Facebook Page likes?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer5" class="faq-answer" role="region" hidden>
+            <p>Followers are people who see a Page's posts in their feed. Likes represent users who have liked the Page. When someone likes a Page they also follow it by default, but they can unlike it while continuing to follow, or like without following. The follower count and like count often differ. For personal profiles there are only followers, not likes. Follower count is generally the more relevant metric for reach.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer6">
+            <span>Can I view Facebook followers without signing in?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer6" class="faq-answer" role="region" hidden>
+            <p>Yes. FBviddl reads publicly available follower data without any Facebook login. No Facebook account, password, or authentication is required at any step. You only need the URL or username of the public profile or Page you want to track.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer7">
+            <span>Can a Facebook Follower Counter be used on mobile devices?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer7" class="faq-answer" role="region" hidden>
+            <p>Yes. FBviddl's follower counter is fully browser-based and works on any Android or iPhone device in Chrome, Safari, or any modern mobile browser. No app installation is required.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer8">
+            <span>Why should I track Facebook follower count instead of checking manually?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer8" class="faq-answer" role="region" hidden>
+            <p>Manual checking requires navigating to Facebook, waiting for the page to load, and noting the number each time. FBviddl's live counter does this automatically every few seconds and tracks the session delta — how many followers were gained or lost since you started tracking. This is especially useful during live events, product launches, or campaign monitoring when you need continuous data without constant manual refreshing.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer9">
+            <span>Is the Facebook Follower Counter free?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer9" class="faq-answer" role="region" hidden>
+            <p>Yes, completely free. No subscription, no sign-up, no hidden fees. FBviddl's follower counter is available to anyone with a browser and an internet connection.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer10">
+            <span>Is it secure to use a Facebook Follower Counter?</span>
+            <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faqAnswer10" class="faq-answer" role="region" hidden>
+            <p>Yes. FBviddl never asks for your Facebook password, login token, or any personal information. It reads only publicly available data. All connections are secured with HTTPS. Avoid any follower counter tool that requests your Facebook credentials — that is a serious security risk. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
+          </div>
+        </div>
 
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <a href="/" class="logo" aria-label="FBviddl Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon">FBviddl</a>
+        <a href="/" class="logo" aria-label="FBviddl Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon" width="36" height="36" loading="lazy">FBviddl</a>
         <p>The fastest way to download public Facebook videos, reels, images, and profile pictures. Simple, secure, and free for all devices.</p>
       </div>
       <div class="footer-col">
@@ -440,7 +587,7 @@ This information can form the basis for simple competitor research, but it is im
   </div>
 </footer>
 
-<!-- Client JavaScript -->
 <script src="/livefbcount.js" defer></script>
+
 </body>
 </html>

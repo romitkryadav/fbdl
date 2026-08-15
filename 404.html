@@ -25,10 +25,9 @@
 <body>
   <header class="header" id="siteHeader" role="banner">
     <div class="container header-inner">
-      <a href="/" class="logo" aria-label="FBviddl - Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon">FBviddl</a>
+      <a href="/" class="logo" aria-label="FBviddl - Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon" width="36" height="36" loading="eager">FBviddl</a>
       <nav class="nav-desktop" role="navigation" aria-label="Primary Navigation">
         <a href="/" class="nav-link">Home</a>
-        <a href="/fbdown" class="nav-link">fbdown</a>
         <a href="/blog" class="nav-link">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
@@ -43,13 +42,12 @@
 
   <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile Navigation" hidden>
     <a href="/" class="nav-link">Home</a>
-    <a href="/fbdown" class="nav-link">fbdown</a>
     <a href="/blog" class="nav-link">Blog</a>
     <a href="/about" class="nav-link">About</a>
     <a href="/contact" class="nav-link">Contact</a>
   </nav>
 
-  <main id="mainContent" role="main">
+  <main id="mainContent">
     <section class="nf-hero" aria-labelledby="nfTitle">
       <div class="container">
         <div class="nf-hero-inner">
@@ -98,14 +96,13 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="/" class="logo" aria-label="FBviddl Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon">FBviddl</a>
+          <a href="/" class="logo" aria-label="FBviddl Home"><img src="https://fbviddl.com/fbviddl-logo.png" alt="FBviddl Logo" class="logo-icon" width="36" height="36" loading="lazy">FBviddl</a>
           <p>The fastest way to download public Facebook videos and reels. Simple, secure, and free for all devices.</p>
         </div>
         <div class="footer-col">
           <h4>Tools</h4>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/fbdown">fbdown</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
@@ -126,7 +123,7 @@
     </div>
   </footer>
 
-  <script>
+  <script defer>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (hamburgerBtn && mobileNav) {

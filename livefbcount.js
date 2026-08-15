@@ -1,7 +1,8 @@
 /**
  * Live Follower Counter - Client Application Engine
  * Vanilla JavaScript implementation for real-time follower growth tracking,
- * animated number transitions, live sparkline trend rendering, and Cloudflare Worker proxy integration.
+ * animated number transitions, live sparkline trend rendering, and
+ * multi-worker (round-robin) Cloudflare Worker proxy integration.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,17 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('submitBtn');
   const btnSpinner = document.getElementById('btnSpinner');
   const btnText = submitBtn.querySelector('.btn-text');
-  
+
   const errorBox = document.getElementById('errorBox');
   const errorMessage = document.getElementById('errorMessage');
-  
+
   const resultCard = document.getElementById('resultCard');
   const pageNameEl = document.getElementById('pageName');
   const profileImageEl = document.getElementById('profileImage');
   const avatarFallbackEl = document.getElementById('avatarFallback');
   const followerCountEl = document.getElementById('followerCount');
   const counterSublabelEl = document.getElementById('counterSublabel');
-  
+
   const trackingLinkEl = document.getElementById('trackingLink');
   const trackingHandleEl = document.getElementById('trackingHandle');
   const subtitleHandleEl = document.getElementById('subtitleHandle');
@@ -39,12 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const pollIterationsVal = document.getElementById('pollIterationsVal');
   const lastVerifiedVal = document.getElementById('lastVerifiedVal');
 
+  // Optional: shows which worker served the last successful response
+  const activeWorkerVal = document.getElementById('activeWorkerVal');
+
   // Sparkline Chart Elements
   const sparklinePath = document.getElementById('sparklinePath');
   const sparklineArea = document.getElementById('sparklineArea');
   const sparklineDot = document.getElementById('sparklineDot');
 
-  // Configuration Elements
+  // Configuration Elements (optional — code works fine if these don't exist in your HTML)
   const workerEndpointSelect = document.getElementById('workerEndpointSelect');
   const customWorkerInput = document.getElementById('customWorkerInput');
   const intervalSelect = document.getElementById('intervalSelect');
@@ -58,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentFollowerCount = 0;
   let isFetching = false;
   let isPaused = false;
-  
-  let refreshIntervalSeconds = 5;
+
+  let refreshIntervalSeconds = 5; // default poll cadence: 5s
   let countdownSeconds = 5.0;
   let pollTicks = 0;
   let timerTicker = null;
@@ -67,9 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Historical Sparkline Data Points Array
   let followerHistory = [];
 
+  // --- Multi-worker round-robin state ---
+  // Add / remove worker URLs here. Requests cycle through this list in order.
+  const WORKER_URLS = [
+    'https://fbcount.romitkr5539.workers.dev/api/facebook-followers',
+    'https://fbcount2.ajeetkr0920.workers.dev/api/facebook-followers',
+    'https://fbcount3.ronitkr9341.workers.dev/api/facebook-followers'
+  ];
+  let workerRotationIndex = 0;
+  let lastUsedWorkerUrl = WORKER_URLS[0];
+
   // Initialize
   initEventListeners();
-  
+
   // Auto-Start tracking target on load
   const initialInput = pageUrlInput.value.trim() || 'mrbeast';
   startFollowerCheck(normalizeFacebookInput(initialInput));
@@ -105,18 +119,40 @@ document.addEventListener('DOMContentLoaded', () => {
     return targetUrl.replace(/^@/, '').split('/')[0] || 'mrbeast';
   }
 
-  function getWorkerApiUrl(targetUrl) {
-    let baseUrl = workerEndpointSelect ? workerEndpointSelect.value : 'https://fbcount.romitkr5539.workers.dev/api/facebook-followers';
-    if (baseUrl === 'custom') {
-      baseUrl = (customWorkerInput && customWorkerInput.value.trim()) || 'https://fbcount.romitkr5539.workers.dev/api/facebook-followers';
+  /**
+   * Returns the list of worker base URLs to rotate through.
+   * Uses the hardcoded WORKER_URLS array above.
+   */
+  function getConfiguredWorkerUrls() {
+    if (WORKER_URLS && WORKER_URLS.length > 0) {
+      return WORKER_URLS;
     }
+    return [DEFAULT_FALLBACK_URL];
+  }
 
+  const DEFAULT_FALLBACK_URL = 'https://fbcount.romitkr5539.workers.dev/api/facebook-followers';
+
+  /**
+   * Round-robins through the configured worker list.
+   * Each call advances the pointer, wrapping back to the start.
+   */
+  function getNextWorkerBaseUrl() {
+    const urls = getConfiguredWorkerUrls();
+    if (workerRotationIndex >= urls.length) {
+      workerRotationIndex = 0;
+    }
+    const url = urls[workerRotationIndex];
+    workerRotationIndex = (workerRotationIndex + 1) % urls.length;
+    return url;
+  }
+
+  function buildWorkerApiUrl(baseUrl, targetUrl) {
     const separator = baseUrl.includes('?') ? '&' : '?';
     return `${baseUrl}${separator}url=${encodeURIComponent(targetUrl)}`;
   }
 
   function initEventListeners() {
-    // Worker Endpoint Selector Change
+    // Worker Endpoint Selector Change (kept for backward compatibility; not used for rotation)
     if (workerEndpointSelect) {
       workerEndpointSelect.addEventListener('change', () => {
         if (customWorkerInput) {
@@ -203,10 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const tabBtn = e.target.closest('.tab-btn');
         if (tabBtn) {
           const targetTabId = tabBtn.getAttribute('data-tab');
-          
+
           docsDrawer.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
           docsDrawer.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
-          
+
           tabBtn.classList.add('active');
           const targetContent = document.getElementById(targetTabId);
           if (targetContent) {
@@ -222,24 +258,25 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   async function startFollowerCheck(url) {
     if (isFetching) return;
-    
+
     hideError();
     currentTargetUrl = url;
     currentTargetHandle = extractHandle(url);
-    
+
     // Reset Counters & History for new Target
     initialFollowerCount = 0;
     currentFollowerCount = 0;
     pollTicks = 0;
     followerHistory = [];
-    
+    workerRotationIndex = 0; // start rotation fresh for a new target
+
     stopAutoRefresh();
-    
+
     await fetchFollowerCount(url, false);
   }
 
   /**
-   * Performs API Call to Cloudflare Worker
+   * Performs API Call to the next Cloudflare Worker in the rotation
    */
   async function fetchFollowerCount(targetUrl, isTickRefresh = false) {
     if (isFetching) return;
@@ -247,8 +284,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setLoadingState(true);
 
+    // Pick the next worker in round-robin order for THIS request
+    const workerBaseUrl = getNextWorkerBaseUrl();
+    lastUsedWorkerUrl = workerBaseUrl;
+
+    if (activeWorkerVal) {
+      try {
+        activeWorkerVal.textContent = new URL(workerBaseUrl).hostname;
+      } catch (e) {
+        activeWorkerVal.textContent = workerBaseUrl;
+      }
+    }
+
     try {
-      const apiEndpoint = getWorkerApiUrl(targetUrl);
+      const apiEndpoint = buildWorkerApiUrl(workerBaseUrl, targetUrl);
       const response = await fetch(apiEndpoint, {
         method: 'GET',
         headers: { 'Accept': 'application/json' }
@@ -265,15 +314,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Successful Data Processing
       hideError();
       pollTicks++;
-      
+
       // Update UI Display
       updateResultUI(data.page);
-      
+
       // Reset Countdown
       resetAutoRefreshCountdown();
 
     } catch (err) {
-      showError('Network connection error or Worker endpoint unreachable.');
+      showError(`Network error contacting worker (${workerBaseUrl}).`);
     } finally {
       isFetching = false;
       setLoadingState(false);
@@ -332,21 +381,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Profile DP Image
     let dpUrl = pageData.profileImage || `https://ui-avatars.com/api/?name=${encodeURIComponent(pageName)}&background=1877F2&color=ffffff&size=256&bold=true`;
 
+    // Resolve relative image paths against the worker that actually served
+    // THIS response (lastUsedWorkerUrl), not a fixed worker.
     if (dpUrl && dpUrl.startsWith('/api/')) {
-      const selectedEndpoint = workerEndpointSelect ? workerEndpointSelect.value : 'https://fbcount.romitkr5539.workers.dev/api/facebook-followers';
-      let activeWorkerUrl = selectedEndpoint;
-      if (selectedEndpoint === 'custom' && customWorkerInput && customWorkerInput.value) {
-        activeWorkerUrl = customWorkerInput.value.trim();
-      }
-      if (activeWorkerUrl && activeWorkerUrl.startsWith('http')) {
-        try {
-          const workerOrigin = new URL(activeWorkerUrl).origin;
-          dpUrl = `${workerOrigin}${dpUrl}`;
-        } catch (e) {
-          dpUrl = `https://fbcount.romitkr5539.workers.dev${dpUrl}`;
-        }
-      } else {
-        dpUrl = `https://fbcount.romitkr5539.workers.dev${dpUrl}`;
+      let activeWorkerUrl = lastUsedWorkerUrl || WORKER_URLS[0];
+      try {
+        const workerOrigin = new URL(activeWorkerUrl).origin;
+        dpUrl = `${workerOrigin}${dpUrl}`;
+      } catch (e) {
+        dpUrl = `${new URL(WORKER_URLS[0]).origin}${dpUrl}`;
       }
     }
 
@@ -545,11 +588,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return name.slice(0, 2).toUpperCase();
   }
-});
 
-
-
-
+  // Hamburger menu
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileNav = document.getElementById('mobileNav');
   if (hamburgerBtn && mobileNav) {
@@ -567,29 +607,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-
-    try {
-      document.querySelectorAll('.faq-item').forEach((item) => {
-        const btn = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        if (!btn || !answer) return;
-        btn.addEventListener('click', () => {
-          const isActive = item.classList.contains('active');
-          document.querySelectorAll('.faq-item').forEach((other) => {
-            other.classList.remove('active');
-            const ob = other.querySelector('.faq-question');
-            const oa = other.querySelector('.faq-answer');
-            if (ob) ob.setAttribute('aria-expanded', 'false');
-            if (oa) oa.setAttribute('hidden', '');
-          });
-          if (!isActive) {
-            item.classList.add('active');
-            btn.setAttribute('aria-expanded', 'true');
-            answer.removeAttribute('hidden');
-          }
+  // FAQ accordion
+  try {
+    document.querySelectorAll('.faq-item').forEach((item) => {
+      const btn = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      if (!btn || !answer) return;
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach((other) => {
+          other.classList.remove('active');
+          const ob = other.querySelector('.faq-question');
+          const oa = other.querySelector('.faq-answer');
+          if (ob) ob.setAttribute('aria-expanded', 'false');
+          if (oa) oa.setAttribute('hidden', '');
         });
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+          answer.removeAttribute('hidden');
+        }
       });
-    } catch (e) {} 
-  
-  
+    });
+  } catch (e) {}
+
+});
