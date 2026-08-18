@@ -198,8 +198,8 @@
     "@context": "https://schema.org",
     "@type": "HowTo",
     "@id": "https://fbviddl.com/#howto",
-    "name": "How to Download Facebook Videos, Images & DPs",
-    "description": "3 simple steps to download any public Facebook post (video, image, or profile picture) to your device using FBviddl.",
+    "name": "How to Download Facebook Videos with FBviddl",
+    "description": "Learn how to copy a public Facebook video link, paste it into FBviddl, and save the file to your device in HD or SD quality.",
     "totalTime": "PT1M",
     "estimatedCost": {
       "@type": "MonetaryAmount",
@@ -209,13 +209,13 @@
     "supply": [
       {
         "@type": "HowToSupply",
-        "name": "Public Facebook post URL (facebook.com)"
+        "name": "Public Facebook video URL"
       }
     ],
     "tool": [
       {
         "@type": "HowToTool",
-        "name": "FBviddl.com",
+        "name": "FBviddl",
         "url": "https://fbviddl.com/"
       }
     ],
@@ -223,24 +223,24 @@
       {
         "@type": "HowToStep",
         "position": 1,
-        "name": "Copy the Facebook Post Link",
-        "text": "Open the Facebook mobile app or website. Navigate to the public post containing the video, image, or profile picture you want to save. Tap the Share button and choose Copy Link.",
+        "name": "Copy the public Facebook video link",
+        "text": "Open Facebook and copy the URL of the public video, reel, or post that you want to save. You can use the Share button or the browser address bar.",
         "image": "https://fbviddl.com/media/facebook-video-downloader.jpg",
         "url": "https://fbviddl.com/#howitworks"
       },
       {
         "@type": "HowToStep",
         "position": 2,
-        "name": "Paste the URL into FBviddl",
-        "text": "Go to FBviddl.com and paste the copied Facebook link into the input field at the top of the page. Click the purple Download button to process the post.",
+        "name": "Paste the link into FBviddl",
+        "text": "Visit fbviddl.com and paste the copied Facebook link into the input box at the top of the page. Click the Download button to start processing the file.",
         "image": "https://fbviddl.com/media/facebook-downloader-dp.jpg",
         "url": "https://fbviddl.com/#downloader"
       },
       {
         "@type": "HowToStep",
         "position": 3,
-        "name": "Save Media to Your Device",
-        "text": "Wait a few seconds for processing. Preview the extracted video, image, or DP, select your preferred quality option, and click Download to save the file directly to your phone, tablet, or computer.",
+        "name": "Choose quality and save the video",
+        "text": "Wait for the preview to load, select HD or SD quality if available, and click the download button to save the file to your phone, tablet, or computer.",
         "image": "https://fbviddl.com/media/facebook-video-downloader.jpg",
         "url": "https://fbviddl.com/#downloader"
       }
@@ -254,16 +254,70 @@
     "@type": "FAQPage",
     "@id": "https://fbviddl.com/#faqpage",
     "mainEntity": [
-      { "@type": "Question", "name": "Is FBviddl free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, FBviddl is completely free. There are no subscription fees, no download limits, no hidden charges, and no account required. Every tool on the platform is free to use without restriction." } },
-      { "@type": "Question", "name": "How do I download a Facebook video on my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Open the Facebook app, find the public video, tap Share, and choose Copy Link. Then open your mobile browser, go to fbviddl.com, paste the link, and tap Download. Choose HD or SD quality and the file saves to your Downloads folder or Camera Roll." } },
-      { "@type": "Question", "name": "Can I download private Facebook videos?", "acceptedAnswer": { "@type": "Answer", "text": "No. FBviddl only works with publicly accessible Facebook videos. Private videos, friends-only posts, and content behind any privacy restriction cannot be downloaded. FBviddl never logs into Facebook or bypasses any privacy settings." } },
-      { "@type": "Question", "name": "Why is my Facebook video not downloading?", "acceptedAnswer": { "@type": "Answer", "text": "Common reasons: the video is set to private; the link is incomplete or copied incorrectly; the video has been deleted; or Facebook has temporarily changed its content delivery. Make sure you are copying the full post share link." } },
-      { "@type": "Question", "name": "Do I need a Facebook account to use FBviddl?", "acceptedAnswer": { "@type": "Answer", "text": "No Facebook account is needed. You only need the URL of the public video you want to download. FBviddl never asks for your Facebook login, password, or any credentials." } },
-      { "@type": "Question", "name": "What is the difference between HD and SD download quality?", "acceptedAnswer": { "@type": "Answer", "text": "HD downloads the highest resolution version — typically 720p or 1080p — with the best quality and larger file size. SD is a compressed version with lower resolution and smaller file size, useful when storage or mobile data is limited." } },
-      { "@type": "Question", "name": "Can I download Facebook Reels with FBviddl?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. FBviddl supports public Facebook Reels. You can paste a Reel link into the main downloader or use the dedicated Facebook Reel Downloader at fbviddl.com/facebook-reel-downloader." } },
-      { "@type": "Question", "name": "Does FBviddl store the videos I download?", "acceptedAnswer": { "@type": "Answer", "text": "No. FBviddl does not store, host, or cache any video files. Every file is fetched directly from Facebook's CDN and streamed to your browser. No copy remains on FBviddl's servers after your session ends." } },
-      { "@type": "Question", "name": "Is it legal to download Facebook videos?", "acceptedAnswer": { "@type": "Answer", "text": "Downloading a public Facebook video for personal offline viewing is generally accepted in most jurisdictions. Re-uploading, distributing, or commercially using someone else's video without permission is a copyright violation. Always respect the original creator's rights." } },
-      { "@type": "Question", "name": "What other Facebook tools does FBviddl offer?", "acceptedAnswer": { "@type": "Answer", "text": "FBviddl offers five free tools: a Facebook Video Downloader, a Facebook Reel Downloader, a Facebook Image Downloader, a Facebook DP Downloader for profile pictures, and a Facebook Follower Counter for real-time audience tracking. All are free with no login required." } }
+      {
+        "@type": "Question",
+        "name": "What is FBviddl?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FBviddl is a free Facebook downloader that helps users save public Facebook videos, reels, profile pictures, and photos without logging in or installing any software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I download videos from a private account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. FBviddl only supports public Facebook content. Videos from private accounts or content hidden behind privacy restrictions cannot be downloaded because the tool does not bypass account restrictions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why did the Facebook video downloader fail to load some videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This usually happens when the video is restricted, the link is incomplete, the post was deleted, or Facebook changed the content delivery format. Make sure you copied the full public URL before trying again."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I download live stream videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but only after the live stream ends and the recording is publicly available. Once the video is accessible, copy the URL and paste it into FBviddl to download it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this Facebook downloader add watermarks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. FBviddl does not add branding or watermarks to downloaded Facebook videos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I share or repost downloaded videos on social media?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You should not repost or redistribute downloaded videos without the original creator's permission. Respect copyright and Facebook's usage rules when sharing content."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need any application to use FBviddl?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. FBviddl works in a web browser on mobile, tablet, or desktop. You only need the public Facebook link and an internet connection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does FBviddl store the videos I download?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. FBviddl does not store or host the downloaded files on its servers. The video is fetched and sent to your browser for download, and no copy remains on the website after the session ends."
+        }
+      }
     ]
   }
   </script>
@@ -394,7 +448,7 @@
     <section class="features-section" id="features" aria-labelledby="featuresHeading">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" id="featuresHeading">Why use FBviddl for Facebook videos?</h2>
+          <h2 class="section-title" id="featuresHeading">Features of FbVidDl - facebook video downloader</h2>
           <p class="section-subtitle">Fast, safe, and free online downloads for every public Facebook video, story, and reel.</p>
         </div>
 
@@ -442,24 +496,24 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" id="stepsHeading">How to download Facebook videos</h2>
-          <p class="section-subtitle">Three easy steps to save public Facebook videos to your device.</p>
+          <p class="section-subtitle">Downloading videos from Facebook is quick and easy using Fbviddl.com. To download Facebook videos, simply follow these three steps.</p>
         </div>
 
         <div class="steps-grid">
           <article class="step-card">
              <div class="step-icon"><img src="https://fbviddl.com/media/fb-video-downloader.jpg" loading="lazy" decoding="async" width="60" height="60" alt="download facebook video" /></div>
-            <h3>Step 1: Copy the Facebook link</h3>
-            <p>Open Facebook, find the public video or reel, tap Share, and copy the URL.</p>
+            <h3>Step 1: Copy the Facebook video Link</h3>
+            <p> Open Facebook app or website and copy the public video/post URL you want to download.</p>
           </article>
           <article class="step-card">
               <div class="step-icon"><img src="https://fbviddl.com/media/download-facebook-video.jpg" loading="lazy" decoding="async" width="60" height="60" alt="download facebook video" /></div>
-            <h3>Step 2: Paste it here</h3>
-            <p>Paste the copied URL into the downloader input box above and press the Download button.</p>
+            <h3>Step 2:  Paste the link into fbviddl Video downloader</h3>
+            <p>Paste link into the input box on the page above and wait a sec for load video.</p>
           </article>
           <article class="step-card">
                <div class="step-icon"><img src="https://fbviddl.com/media/facebook-video-downloader.jpg" loading="lazy" decoding="async" width="60" height="60" alt="download facebook video" /></div>
-            <h3>Step 3: Save the file</h3>
-            <p>Choose HD or SD quality once processing is complete, then download the video directly to your device.</p>
+            <h3>Step 3:  Click on the Download button to save.</h3>
+            <p> After the Facebook video loads, click on the download button, and the video will be saved in your device's download folder.</p>
           </article>
         </div>
       </div>
@@ -468,34 +522,24 @@
     <section class="info-section" aria-labelledby="infoHeading">
       <div class="container">
         <article class="info-content">
-          <h2 id="infoHeading">FBviddl — Free Facebook Video Downloader</h2>
-          <p>Facebook hosts billions of public videos every day — tutorials, news clips, live streams, comedy shorts, sports highlights, and creator content. But Facebook does not provide a native download button for most videos, leaving users with no straightforward way to save content they want to watch offline or keep permanently. <strong>FBviddl</strong> solves that problem. It is a free, browser-based Facebook Video Downloader that extracts the source file of any publicly available Facebook video and presents it as a direct download link — no account, no software, and no browser extension required.</p>
-          <p>FBviddl has been built around simplicity and speed. Paste a public Facebook video URL into the input field above, click Download, and the tool fetches the video from Facebook's servers and shows you the available quality options within seconds. Choose HD for the best resolution or SD for a smaller file size, then save the file directly to your device. The entire process takes under a minute.</p>
-          <p>Beyond video, FBviddl is a complete Facebook media toolkit. You can <a href="/facebook-reel-downloader">download Facebook Reels</a>, <a href="/facebook-image-downloader">save Facebook photos and images</a>, <a href="/facebook-dp-downloader">download full-size profile pictures</a>, and <a href="/facebook-follower-counter">track live Facebook follower counts</a> — all from the same platform, all for free.</p>
+          <h2 id="infoHeading"> 
 
-          <h2>How to Download Facebook Videos — Step by Step</h2>
-          <p>Using FBviddl takes three steps. First, open Facebook on your phone or computer and navigate to the public video you want to save. Tap the Share button on the post and choose <em>Copy Link</em>. Second, come back to FBviddl and paste that link into the input field at the top of this page. Third, press the Download button, wait a few seconds for processing, then select your preferred quality and save the file. The video will download directly to your device's default Downloads folder or Camera Roll.</p>
+<h2>Why choose Fbviddll for downloading Facebook videos?</h2>
+ <h3>Facebook video downloader without login</h3>        
+<p>Fbviddl lets you download videos without creating an account or logging in. This tool lets you save publicly available videos directly to your device.</p>
+<h3>Download Facebook videos in HD</h3>
+<p>This FB downloader provides you the highest available quality from our source. We also provide HD and SD options for users according to their needs.</p>
+<h3>Download Facebook videos without a watermark.</h3>
+<p>You can save your videos without taking any tension. Because we never put any watermarks and restrict Facebook videos you download.</p>
+<h3>Fbviddl works on all devices.</h3>  
+<p>Our Facebook downloader is a browser-based utility site so you can access our website through your browser app or any Internet Explorer. </p>   
 
-          <h2>Download Facebook Videos on Android</h2>
-          <p>Android users can download Facebook videos directly through any modern mobile browser — Chrome, Firefox, or Samsung Internet. Open the Facebook app or Facebook in your mobile browser, find the public video, tap Share, and copy the link. Open a new tab, go to <strong>fbviddl.com</strong>, paste the link, and tap Download. When the quality options appear, tap your preferred option and select <em>Download</em> from the popup menu. The file saves to your internal storage or SD card depending on your browser's download settings.</p>
+<h2>Free Facebook video downloader online.</h2>
+<p>Using Fbviddl, you can download your FB videos that you want for free and without any limits. You only have to paste your video URL and download it after saving the video; you can view it offline any time.</p> 
 
-          <h2>Download Facebook Videos on iPhone and iPad</h2>
-          <p>On iPhone and iPad, the process works in Safari or any other browser. Copy the Facebook video link from the share menu, visit FBviddl in your browser, paste the link, and tap Download. When the video loads, tap and hold the Download button and choose <em>Download Linked File</em>. The file saves to your Files app under Downloads. You can then move it to your Photos library using the Files app if needed. No additional app installation is required at any step.</p>
-
-          <h2>Download Facebook Videos on Desktop</h2>
-          <p>Desktop users on Windows or Mac can download Facebook videos in a few clicks. Open Facebook in your browser, right-click the Share button on the video post, and copy the link address — or use the Share menu to copy the URL. Go to <strong>fbviddl.com</strong> in a new tab, paste the URL, and click Download. Once the quality options appear, right-click the HD or SD button and choose <em>Save Link As</em> to save the file to any folder on your computer. Most modern browsers also support a direct click-to-download without needing right-click.</p>
-
-          <h2>What Types of Facebook Videos Can FBviddl Download?</h2>
-          <p>FBviddl works with a wide range of publicly available Facebook video content, including standard feed videos, Facebook Watch videos, public Facebook Reels, completed Facebook Live streams, and videos posted to public Pages and Groups. If you are looking specifically for Reels, you can also use our dedicated <a href="/facebook-reel-downloader">Facebook Reel Downloader</a> which is optimized for short-form vertical content.</p>
-          <p>There are some limitations by design. FBviddl cannot download videos from private profiles, friends-only posts, or any content that requires a Facebook login to view. This restriction exists because FBviddl only processes publicly accessible content — it never logs into Facebook or accesses any account on your behalf.</p>
-
-          <h2>HD vs. SD — Which Quality Should You Choose?</h2>
-          <p>When FBviddl processes a video, it presents two quality options when both are available: HD (High Definition) and SD (Standard Definition). HD delivers the highest available resolution — typically 720p or 1080p depending on what the original uploader posted. SD is a compressed version that is smaller in file size, which is useful when storage or data is limited. If the original video was uploaded in HD, the HD download will match that quality exactly. FBviddl does not re-encode or compress any video — what you download is what Facebook stores.</p>
-
-          <h2>Is It Safe to Use FBviddl?</h2>
-          <p>Yes. FBviddl does not require your Facebook password, email address, or any login credentials. The tool only needs the URL of a public video. No downloaded files are stored on FBviddl's servers — every video is fetched directly from Facebook's content delivery network and streamed to your device. All connections to FBviddl are protected by HTTPS. You can review our full <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a> for complete details on how the service operates.</p>
-          <p>As a general best practice when downloading any online content, only save videos you have the right to use. Respect copyright and always get permission from the original creator before re-publishing or using their content commercially.</p>
-
+<p>Our FB downloader works on Android, iPhone, Mac, and Windows through their browser. And it also supports Facebook images, GIFs,  profile pictures (DPs), and reels so you can download them in one place without using any other software.
+</p>
+          
           <h2>Other Free Facebook Tools on FBviddl</h2>
           <p>FBviddl is more than a video downloader. Here is a quick overview of all the free tools available on this platform:</p>
           <ul>
@@ -519,71 +563,71 @@
 
           <div class="faq-item active" role="listitem">
             <button type="button" class="faq-question" aria-expanded="true" aria-controls="faqAnswer1">
-              <span>Is FBviddl free to use?</span>
+              <span>What is Fbviddl?</span>
               <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div id="faqAnswer1" class="faq-answer" role="region">
-              <p>Yes, FBviddl is completely free. There are no subscription fees, no download limits, no hidden charges, and no account required. Every tool on the platform — video downloader, reel downloader, image downloader, DP downloader, and follower counter — is free to use without restriction.</p>
+              <p>Fbviddl is a Facebook downloader tool that lets you download Facebook videos , photos, DPs, and reels. Fbviddl also provides a Facebook follower counter so you can see your live follower count and statistics. </p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer2">
-              <span>How do I download a Facebook video on my phone?</span>
+              <span>Can I download videos from a private account?</span>
               <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div id="faqAnswer2" class="faq-answer" role="region" hidden>
-              <p>Open the Facebook app, find the public video, tap Share, and choose Copy Link. Then open your mobile browser, go to fbviddl.com, paste the link into the input field, and tap Download. Choose HD or SD quality when the options appear, and the file saves to your Downloads folder or Camera Roll.</p>
+              <p>No, you cannot download Facebook videos from private accounts using fbviddl. Our downloader only supports publicly accessible Facebook videos and does not bypass private account restrictions.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer3">
-              <span>Can I download private Facebook videos?</span>
+              <span>Why did Facebook Video Downloader fail to load some videos?</span>
               <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div id="faqAnswer3" class="faq-answer" role="region" hidden>
-              <p>No. FBviddl only works with publicly accessible Facebook videos — content that anyone can view without a Facebook login. Private videos, friends-only posts, and content behind any privacy restriction cannot be downloaded. FBviddl never attempts to log into Facebook or bypass any privacy settings.</p>
+              <p>This happens because some videos are restricted to sharing and reusing, the user has changed their content privacy setting. That's why the video failed to load.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer4">
-              <span>Why is my Facebook video not downloading?</span>
+              <span>Can I download live stream video?</span>
               <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div id="faqAnswer4" class="faq-answer" role="region" hidden>
-              <p>The most common reasons are: the video is set to private or friends-only; the link is incomplete or copied incorrectly; the video has been deleted; or Facebook has temporarily changed its content delivery in a way that affects processing. Make sure you are copying the full post URL or share link, not just the URL from a video embedded on another site.</p>
+              <p>Yes, you can download it, but only when the live stream ends and is publicly available. And when it ends, just copy the link and paste it into the fbviddl downloader input box, wait a while for the video to load, and simply download it.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer5">
-              <span>Do I need a Facebook account to use FBviddl?</span>
+              <span>Does this Facebook Downloader add watermarks?</span>
               <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div id="faqAnswer5" class="faq-answer" role="region" hidden>
-              <p>No Facebook account is needed. You only need the URL of the public video you want to download. FBviddl never asks for your Facebook login, password, or any account credentials. Your Facebook session is never involved in the download process.</p>
+              <p>No, we do not add any watermark for our branding in Facebook videos.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer6">
-              <span>What is the difference between HD and SD download quality?</span>
+              <span>Can I share downloaded videos with friends or repost them on social media?</span>
               <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div id="faqAnswer6" class="faq-answer" role="region" hidden>
-              <p>HD (High Definition) downloads the highest resolution version of the video available on Facebook — typically 720p or 1080p — and produces the best picture quality with a larger file size. SD (Standard Definition) is a compressed version with lower resolution and a smaller file size, useful when storage or mobile data is limited. Both are the original files from Facebook — FBviddl does not re-encode or alter any video.</p>
+              <p>No, you are not allowed to share or reupload downloaded videos on social platforms. Respect the copyright owner of the video and take permission for reuse.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer7">
-              <span>Can I download Facebook Reels with FBviddl?</span>
+              <span>Do I need any application to use FBVIddl?</span>
               <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div id="faqAnswer7" class="faq-answer" role="region" hidden>
-              <p>Yes. FBviddl supports public Facebook Reels in addition to standard videos. You can paste a Reel link directly into the main downloader on this page, or use the dedicated <a href="/facebook-reel-downloader">Facebook Reel Downloader</a> which is optimised specifically for short-form vertical Reel content.</p>
+              <p>No, you can use fbviddl through your device browser, like Chrome or Safari. </p>
             </div>
           </div>
 
@@ -596,27 +640,6 @@
               <p>No. FBviddl does not store, host, or cache any video files on its servers. Every file is fetched directly from Facebook's content delivery network and streamed to your browser. Once your download is complete, no copy of the file remains on FBviddl's infrastructure. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
             </div>
           </div>
-
-          <div class="faq-item" role="listitem">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer9">
-              <span>Is it legal to download Facebook videos?</span>
-              <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faqAnswer9" class="faq-answer" role="region" hidden>
-              <p>Downloading a public Facebook video for personal offline viewing is generally accepted in most jurisdictions. However, re-uploading, distributing, or commercially using someone else's video without the creator's permission is a copyright violation regardless of how the file was obtained. Always respect the original creator's rights. If the content is your own, there are no restrictions. Review our <a href="/terms">Terms of Service</a> for the full acceptable use policy.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faqAnswer10">
-              <span>What other Facebook tools does FBviddl offer?</span>
-              <svg class="faq-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faqAnswer10" class="faq-answer" role="region" hidden>
-              <p>FBviddl offers five free tools: a <a href="/">Facebook Video Downloader</a> for standard videos, a <a href="/facebook-reel-downloader">Facebook Reel Downloader</a> for short-form Reels, a <a href="/facebook-image-downloader">Facebook Image Downloader</a> for photos, a <a href="/facebook-dp-downloader">Facebook DP Downloader</a> for full-size profile pictures, and a <a href="/facebook-follower-counter">Facebook Follower Counter</a> for real-time audience tracking. All are free with no login required.</p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
