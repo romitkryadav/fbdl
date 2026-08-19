@@ -933,3 +933,38 @@ html, body {
     justify-content: space-between;
   }
 }
+
+/* ─── Tool Tabs: above H1, centered on desktop ──────────────────────────── */
+
+/* The hero section on the follower counter uses a flex column so we can
+   control order precisely on each breakpoint. */
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* On desktop the tab strip sits at the top, above the H1 */
+@media (min-width: 768px) {
+  .hero-section #toolTabs {
+    order: -1;           /* visually first */
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+  .hero-section .hero-copy {
+    order: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* On mobile restore natural reading order: title first, tabs second */
+@media (max-width: 767px) {
+  .hero-section #toolTabs {
+    order: 1;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-section .hero-copy {
+    order: 0;
+  }
+}
