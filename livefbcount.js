@@ -133,9 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Worker Pool ──
   const WORKER_URLS = [
-    'https://fbcount.romitkr5539.workers.dev/api/facebook-followers',
+   'https://fbcount.romitkr5539.workers.dev/api/facebook-followers',
     'https://fbcount2.ajeetkr0920.workers.dev/api/facebook-followers',
     'https://fbcount3.ronitkr9341.workers.dev/api/facebook-followers'
+    
   ];
   let workerRotationIndex = 0;
   let lastUsedWorkerUrl   = WORKER_URLS[0];
